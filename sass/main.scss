@@ -1,0 +1,256 @@
+@import "susy";
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;
+$gutter-width: 0.2em;
+$grid-padding: 0.2em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12;
+
+body{
+    @include box-sizing(border-box);
+    @include container($total-columns,$break1,$break2);
+    #banner{
+        @include span-columns(4 omega);
+        background : #2D2D2D;
+        box-shadow: 3px 3px 5px 2px #7f8c8d;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        padding:1%;
+
+        &>div{
+            @include span-columns($total-columns omega);
+            text-align:center;
+            padding:1%;
+            margin:3% 0;
+            font-size:4em;
+            position:relative;
+            &>a{
+                text-align:center;
+                color:white;
+                text-decoration:none;
+                font-family: 'Lovelo_Black';
+            }
+            &>#mobile{
+                position: absolute;
+                right:2%;
+                top: 15%;
+                background:transparent;
+                &>img{
+                    width:1.5em;
+                }
+            }
+        }
+        &>section{
+            @include span-columns($total-columns omega);
+            display:none;
+            &>div.search{
+                @include span-columns($total-columns omega);
+                &>form{
+                    &>#search{
+                        @include span-columns(7, 8);
+                        border:1px ridge grey;
+                        background:grey;
+                        color:white;
+                        padding:2%;
+                        font-size:3em;
+                    }
+                    &>#searchb{
+                        @include span-columns(1, 8);
+                        border:0px ridge #c0392b;
+                        border-bottom:1px;
+                        background:#c0392b;
+                        color:white;
+                        padding:2%;
+                        font-size:3em;
+                        margin-right:0;
+                        &:hover{
+                            background:white;
+                            color: #c0392b;
+                        }
+                    }
+                }
+            }
+            &>div.action{
+                @include span-columns($total-columns omega);
+                border:0px ridge #c0392b;
+                background:#c0392b;
+                color:white;
+                margin:1% 0;
+                padding:2% 0;
+                text-align:center;
+                font-size:3em;
+                &>a{
+                    color:white;
+                    text-decoration:none;
+                }
+                &:hover{
+                    background:white;
+                    &>a{
+                        color:#c0392b;
+                    }
+                }
+            }
+            &>div.menu{
+                @include span-columns($total-columns omega);
+                margin:2% 0;
+                position:relative;
+                &>h2{
+                    color:white;
+                    text-align:center;
+                    font-size:2.5em;
+                }
+                &>div{
+                    @include span-columns($total-columns omega);
+                    position:absolute;
+                    z-index:100;
+                    display:none;
+                    &>a{
+                        text-decoration:none;
+                        &>input{
+                            @include span-columns($total-columns omega);
+                            border: 0px ridge #c0392b;
+                            background:#c0392b;
+                            text-align:center;
+                            font-size:2.5em;
+                            padding:2% 0;
+                            color:white;
+                            &:hover{
+                                background:white;
+                                color:#c0392b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        @include span-columns($total-columns omega);
+        background:#2D2D2D;
+        height:20px;
+        position:absolute;
+        bottom:0px;
+        &>p{
+
+            @include span-columns($total-columns omega);
+            color:white;
+            margin-top: 0.7%;
+            font-size:13px;
+            text-align:center;
+        }
+    }
+
+    @include at-breakpoint($break1){
+        #banner{
+
+            &>div{
+                @include span-columns($total-columns omega);
+                margin:0;
+                font-size:20px;
+                &>#mobile{
+                    display:none;
+                }
+            }
+            &>#acts{
+                @include span-columns($total-columns omega);
+                display:block;
+                &>div.search{
+                    @include span-columns(4, 8);
+                    margin:0;
+                    #search, #searchb{
+                        font-size:15px;
+                        padding:1%;
+                    }
+                }
+                &>div.action{
+                    @include span-columns(2 omega, 8);
+                    margin:0;
+                    padding:0.7% 0;
+                    font-size:14px;
+                }
+                &>div.menu{
+                    @include span-columns(3 omega, 8);
+                    margin-bottom:0;
+                    margin-top:1%;
+                    &>h2{
+                        font-size:14px;
+                    }
+                    &>div>a>input{
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+        footer{
+            &>p{
+                @include span-columns(4, 8);
+            }
+        }
+    }
+
+    @include at-breakpoint($break2){
+        #banner{
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
+            padding-bottom:0;
+
+            &>div{
+                @include span-columns(3, 12);
+                margin:0;
+                margin-top:2px;
+                padding:0;
+                font-size:20px;
+                &>#mobile{
+                    display:none;
+                }
+            }
+            &>#acts{
+                @include span-columns(9 omega, 12);
+                margin-top:-3px;
+                margin-bottom:7px;
+                display:block;
+                &>div.search{
+                    @include span-columns(3, 9);
+                    #search, #searchb{
+                        font-size: 15px;
+                        padding:1%;
+                    }
+                }
+                &>div.action{
+                    @include span-columns(2 omega, 9);
+                    padding:0.7% 0;
+                    margin:0;
+                    font-size:14px;
+                }
+                &>div.menu{
+                    @include span-columns(3 omega, 9);
+                    margin-bottom:0;
+                    margin-top:0.5%;
+                    &>h2{
+                        font-size:14px;
+                    }
+                    &>div>a>input{
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+        footer{
+            @include span-columns($total-columns omega);
+            background:#2D2D2D;
+            height:30px;
+            &>p{
+                @include span-columns(3 omega, 12);
+                color:white;
+                margin-top: 0.7%;
+            }
+        }
+    }
+}
+

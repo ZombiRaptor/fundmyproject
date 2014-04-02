@@ -1,0 +1,127 @@
+{%extends "main.html.twig"%}
+
+{% block mainhead %}
+
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/fonts.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/profil.css" />
+
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+    $(function() {
+        $("#tabs").tabs();
+    });
+</script>
+{% endblock %}
+
+{% block mainsection %}
+<section id="page">
+    <section id='user'>
+        <section id='profil'>
+            <div id='photo'>
+                <ul id='side'>
+                {% if utilisateur.fb != null %}
+                    <li id='fb'><a href='{{utilisateur.fb}}'><img src='../logos/facebook5.png'/></a></li>
+                {% endif %}
+                {% if utilisateur.siteweb != null %}
+                    <li id="website"><a href='{{utilisateur.siteweb}}'><img src='../logos/mozilla.png'/></a></li>
+                {% endif %}
+                </ul>
+                <img id='img' src='..{{utilisateur.photo}}'/>
+            </div>
+            <div id='infos'>
+                <h1 id='nomprenom'>{{utilisateur.nom}} {{utilisateur.prenom}}</h1>
+                <h3 id='location'><img src='/www/moine7u/amtj-fmp/logos/location2.png'/> {{utilisateur.ville}}, {{utilisateur.pays}}</h3>
+                <p id='bio'>{{utilisateur.biographie}}</p>
+            {% if utilisateur.tel != null%}
+                <h3 id="tel"><label>Téléphone :</label> {{utilisateur.tel}}</h3>
+            {% endif %}
+                <h3 id="date"><label>Membre depuis le :</label> {{utilisateur.datecreation}}</h3>
+            </div>
+        </section>
+        <div id="tabs">
+            <ul>
+                <li id="1"><a href="#tabs-1">Mes projets</a><span>{{projets | length}}</span></li>
+                <li id="2"><a href="#tabs-2">Suivis</a><span>{{suivis | length}}</span></li>
+                <li id="3"><a href="#tabs-3">Soutenus</a><span>{{soutenus | length}}</span></li>
+            </ul>
+            <div id="tabs-1">
+            {% if((projets | length) == 0)%}
+                <h2><img style='width: 15px' src='/www/moine7u/amtj-fmp/logos/info5.png'/> Aucun projet </h2>
+            {% else %}
+                {% for projet in projets %}
+                <a href="{{app.urlFor('afficherProjet', {'id': projet.idprojet})}}">
+                    <article>
+                        <div id="photoprojet">
+                            <img src='/www/moine7u/amtj-fmp{{projet.medias[0].url}}'/>
+                        </div>
+                        <div>
+                            <h1 id="titre">{{projet.titre }}</h1>
+                            <h3 id="but">Objectif : {{projet.but}} €</h3>
+                            <h3 id="recu">Recolté : {{projet.argentrecu}} €</h3>
+                            <h3 id="tps">J-{{projet.restant}}</h3>
+                        </div>  
+                        <div id="amount">
+                            <strong>{{((projet.argentrecu / projet.but)*100)| round}}%</strong>
+                            <meter value="{{projet.argentrecu}}" max="{{projet.but}}"></meter>
+                        </div>
+                    </article>
+                </a>
+                {% endfor %}
+            {% endif %}
+            </div>
+            <div id="tabs-2">
+            {% if (suivis | length) == 0 %}
+                <h2><img style='width: 15px' src='/www/moine7u/amtj-fmp/logos/info5.png'/> Aucun projet </h2>
+            {% else %}
+                {% for projet in suivis %}
+                <a href="{{app.urlFor('afficherProjet', {'id': projet.idprojet})}}">
+                    <article>
+                        <div id="photoprojet">
+                            <img src='/www/moine7u/amtj-fmp{{projet.medias[0].url}}'/>
+                        </div>
+                        <div>
+                            <h1 id="titre">{{projet.titre}}</h1>
+                            <h3 id="but">Objectif : {{projet.but}} €</h3>
+                            <h3 id="recu">Recolté : {{projet.argentrecu}} €</h3>
+                            <h3 id="tps">J-{{projet.restant}}</h3>
+                        </div>
+                        <div id="amount">
+                            <strong>{{((projet.argentrecu / projet.but)*100)| round}}%</strong>
+                            <meter value="{{projet.argentrecu}}" max="{{projet.but}}"></meter>
+                        </div>
+                    </article>
+                </a>
+                {% endfor %}
+            {% endif %}
+            </div>
+            <div id="tabs-3">
+            {% if (soutenus | length) == 0 %}
+                <h2><img style='width: 15px' src='/www/moine7u/amtj-fmp/logos/info5.png'/> Aucun projet </h2>
+            {% else %}
+                {% for projet in soutenus %}
+                <a href="{{app.urlFor('afficherProjet', {'id': projet.idprojet})}}">
+                    <article>
+                        <div id="photoprojet">
+                            <img src='/www/moine7u/amtj-fmp{{projet.medias[0].url}}'/>
+                        </div>
+                        <div>
+                            <h1 id="titre">{{projet.titre }}</h1>
+                            <h3 id="but">Objectif : {{projet.but}} €</h3>
+                            <h3 id="recu">Recolté : {{projet.argentrecu}} €</h3>
+                            <h3 id="tps">J-{{projet.restant}}</h3>
+                        </div>
+                        <div id="amount">
+                            <strong>{{((projet.argentrecu / projet.but)*100)| round}}%</strong>
+                            <meter value="{{projet.argentrecu}}" max="{{projet.but}}"></meter>
+                        </div>
+                    </article>
+                </a>
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    </section>
+</section>
+
+{% endblock %}

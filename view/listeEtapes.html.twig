@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/listeEtapes.css"/>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var titre = $('#titre').val();
+        $('#'+titre).addClass('active');
+    });
+</script>
+
+
+<div id="etapes">
+    <input type="hidden" id="titre" value="{{titre}}"/>
+    <div class="breadcrumb flat">
+        <a id="description" href="{{app.urlFor('afficherFormEditionDescription', {'id': projet.idprojet})}}"><span>Description</span></a>
+        <a id="media" href="{{app.urlFor('afficherFormEditionMedia', {'id': projet.idprojet})}}"><span>Media</span></a>
+        <a id="recompenses" href="{{app.urlFor('afficherFormEditionRecompenses', {'id': projet.idprojet})}}"><span>Recompenses</span></a>
+        <a id="bio" href="{{app.urlFor('afficherFormEditionBio', {'id': projet.idprojet})}}"><span>Bio</span></a>
+    </div>
+</div>

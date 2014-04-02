@@ -1,0 +1,273 @@
+/* line 17, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 16, ../sass/error.scss */
+body {
+  font-family: "Open Sans",arial,sans-serif;
+  background-image: url("/amtj-fmp/img/pattern1.png");
+}
+
+/* line 20, ../sass/error.scss */
+body > #page {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *zoom: 1;
+  padding-left: 0em;
+  padding-right: 0em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+body > #page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 23, ../sass/error.scss */
+body > #page > section {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: 0em;
+  display: inline;
+  background: white;
+  box-shadow: 3px 3px 5px 2px #7f8c8d;
+  margin-top: 2%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 2%;
+}
+/* line 32, ../sass/error.scss */
+body > #page > section > h1 {
+  font-size: 5em;
+  margin: 2%;
+  font-family: 'Give You Glory', cursive;
+}
+/* line 37, ../sass/error.scss */
+body > #page > section > a {
+  font-family: "Open Sans",arial,sans-serif;
+  color: #c0392b;
+  text-decoration: none;
+  font-size: 2.5em;
+  margin-left: 3%;
+  margin-bottom: 5%;
+}
+/* line 45, ../sass/error.scss */
+body > #page > section > #forbidden {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: 0em;
+  display: inline;
+}
+/* line 47, ../sass/error.scss */
+body > #page > section > #forbidden > img {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: 0em;
+  display: inline;
+}
+/* line 50, ../sass/error.scss */
+body > #page > section > #forbidden > #youdidnt {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: 0em;
+  display: inline;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: #203085;
+  font-family: 'courier';
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px;
+}
+@media (min-width: 1024px) and (max-width: 1152px) {
+  /* line 66, ../sass/error.scss */
+  body > #page > section {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 68, ../sass/error.scss */
+  body > #page > section > h1 {
+    font-size: 30px;
+  }
+  /* line 71, ../sass/error.scss */
+  body > #page > section > a {
+    font-size: 15px;
+  }
+  /* line 74, ../sass/error.scss */
+  body > #page > section > div > img {
+    width: 50%;
+    float: left;
+    margin-right: 0%;
+  }
+  /* line 77, ../sass/error.scss */
+  body > #page > section > div > #youdidnt {
+    width: 50%;
+    float: right;
+    margin-right: 0;
+    max-height: 356px;
+    min-height: 356px;
+  }
+}
+@media (min-width: 1152px) and (max-width: 1854px) {
+  /* line 20, ../sass/error.scss */
+  body > #page {
+    margin-left: 8.33333%;
+    width: 83.33333%;
+    float: right;
+    margin-right: 0;
+    margin-right: 8.33333%;
+  }
+  /* line 89, ../sass/error.scss */
+  body > #page > section {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 91, ../sass/error.scss */
+  body > #page > section > h1 {
+    font-size: 35px;
+  }
+  /* line 94, ../sass/error.scss */
+  body > #page > section > a {
+    font-size: 15px;
+  }
+  /* line 97, ../sass/error.scss */
+  body > #page > section > #forbidden {
+    margin-left: 16.66667%;
+    width: 66.66667%;
+    float: right;
+    margin-right: 0;
+    margin-right: 16.66667%;
+  }
+  /* line 101, ../sass/error.scss */
+  body > #page > section > #forbidden > img {
+    width: 50%;
+    float: left;
+    margin-right: 0%;
+  }
+  /* line 104, ../sass/error.scss */
+  body > #page > section > #forbidden > #youdidnt {
+    width: 50%;
+    float: right;
+    margin-right: 0;
+    max-height: 356px;
+    min-height: 356px;
+  }
+}
+@media (min-width: 1855px) {
+  /* line 20, ../sass/error.scss */
+  body > #page {
+    margin-left: 25%;
+    width: 50%;
+    float: right;
+    margin-right: 0;
+    margin-right: 25%;
+  }
+  /* line 117, ../sass/error.scss */
+  body > #page > section {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 119, ../sass/error.scss */
+  body > #page > section > h1 {
+    font-size: 35px;
+  }
+  /* line 122, ../sass/error.scss */
+  body > #page > section > a {
+    font-size: 15px;
+  }
+  /* line 125, ../sass/error.scss */
+  body > #page > section > #forbidden {
+    margin-left: 16.66667%;
+    width: 66.66667%;
+    float: right;
+    margin-right: 0;
+    margin-right: 16.66667%;
+  }
+  /* line 129, ../sass/error.scss */
+  body > #page > section > #forbidden > img {
+    width: 50%;
+    float: left;
+    margin-right: 0%;
+  }
+  /* line 132, ../sass/error.scss */
+  body > #page > section > #forbidden > #youdidnt {
+    width: 50%;
+    float: right;
+    margin-right: 0;
+    max-height: 356px;
+    min-height: 356px;
+  }
+}

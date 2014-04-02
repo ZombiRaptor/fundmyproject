@@ -1,0 +1,137 @@
+/* line 15, ../sass/social.scss */
+body #social {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  display: block;
+  box-shadow: 3px 3px 5px 2px #7f8c8d;
+}
+/* line 19, ../sass/social.scss */
+body #social > li {
+  width: 25%;
+  display: inline;
+  float: left;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+}
+/* line 26, ../sass/social.scss */
+body #social > li > a > img {
+  width: 5em;
+}
+/* line 31, ../sass/social.scss */
+body #social > #fb {
+  background: #3b5998;
+}
+/* line 33, ../sass/social.scss */
+body #social > #fb > a > img {
+  padding-left: 43%;
+  padding-top: 8%;
+  width: 2.5em;
+}
+/* line 38, ../sass/social.scss */
+body #social > #fb:hover {
+  background: #8b9dc3;
+}
+/* line 42, ../sass/social.scss */
+body #social > #twitter {
+  background: #4099FF;
+}
+/* line 44, ../sass/social.scss */
+body #social > #twitter > a > img {
+  padding-left: 35%;
+  padding-top: 8%;
+}
+/* line 48, ../sass/social.scss */
+body #social > #twitter:hover {
+  background: #9ae4e8;
+}
+/* line 52, ../sass/social.scss */
+body #social > #google {
+  background: #D34836;
+}
+/* line 54, ../sass/social.scss */
+body #social > #google > a > img {
+  padding-left: 35%;
+  padding-top: 9%;
+}
+/* line 58, ../sass/social.scss */
+body #social > #google:hover {
+  background: #2D2D2D;
+}
+/* line 62, ../sass/social.scss */
+body #social > #rss {
+  background: #FF6600;
+}
+/* line 64, ../sass/social.scss */
+body #social > #rss > a > img {
+  padding-left: 39%;
+  padding-top: 9%;
+}
+/* line 68, ../sass/social.scss */
+body #social > #rss:hover {
+  background: black;
+}
+@media (min-width: 1024px) and (max-width: 1152px) {
+  /* line 75, ../sass/social.scss */
+  body #social {
+    width: 49.42529%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+  /* line 77, ../sass/social.scss */
+  body #social > li {
+    height: 43px;
+  }
+  /* line 79, ../sass/social.scss */
+  body #social > li > a > img {
+    width: 25px;
+  }
+  /* line 83, ../sass/social.scss */
+  body #social > #fb > a > img {
+    width: 12px;
+  }
+}
+@media (min-width: 1152px) {
+  /* line 90, ../sass/social.scss */
+  body #social {
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    right: 2%;
+  }
+  /* line 95, ../sass/social.scss */
+  body #social > li {
+    height: 50px;
+    width: 50px;
+    display: block;
+    float: none;
+  }
+  /* line 100, ../sass/social.scss */
+  body #social > li > a > img {
+    width: 25px;
+  }
+  /* line 104, ../sass/social.scss */
+  body #social > #fb > a > img {
+    padding-left: 38%;
+    padding-top: 26%;
+    width: 12px;
+  }
+  /* line 110, ../sass/social.scss */
+  body #social > #twitter > a > img {
+    padding-left: 29%;
+    padding-top: 25%;
+  }
+  /* line 115, ../sass/social.scss */
+  body #social > #google > a > img {
+    padding-left: 29%;
+    padding-top: 25%;
+  }
+  /* line 120, ../sass/social.scss */
+  body #social > #rss > a > img {
+    padding-left: 33%;
+    padding-top: 28%;
+  }
+}

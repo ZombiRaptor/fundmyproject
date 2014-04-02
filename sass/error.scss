@@ -1,0 +1,141 @@
+@import "susy";
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;
+$gutter-width: 0em;
+$grid-padding: 0em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12 1854px;
+$break3:1855px 16;
+
+body{
+    font-family: "Open Sans",arial,sans-serif;
+    background-image:url('/amtj-fmp/img/pattern1.png');
+}
+body>#page{
+    @include box-sizing(border-box);
+    @include container($total-columns,$break1,$break2, $break3);
+    &>section{
+        @include span-columns($total-columns omega);
+        background:white;
+        box-shadow: 3px 3px 5px 2px #7f8c8d;
+        margin-top:2%;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        padding:2%;
+        &>h1{
+            font-size:5em;
+            margin:2%;
+            font-family: 'Give You Glory', cursive;
+        }
+        &>a{
+            font-family: "Open Sans",arial,sans-serif;
+            color:#c0392b;
+            text-decoration:none;
+            font-size:2.5em;
+            margin-left:3%;
+            margin-bottom:5%;
+        }
+        &>#forbidden{
+            @include span-columns ($total-columns omega);
+            &>img{
+                @include span-columns($total-columns omega);
+            }
+            &>#youdidnt{
+                @include span-columns($total-columns omega);
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                background:#203085;
+                font-family:'courier';
+                color:white;
+                font-size:12px;
+                font-weight:bold;
+                padding:3px;                                                                                                           
+            }
+        }
+    }
+
+    @include at-breakpoint($break1){
+        &>section{
+            @include span-columns($total-columns omega);
+            &>h1{
+                font-size:30px;
+            }
+            &>a{
+                font-size:15px;
+            }
+            &>div>img{
+                @include span-columns(4, $total-columns);
+            }
+            &>div>#youdidnt{
+                @include span-columns(4 omega, $total-columns);
+                max-height:356px;
+                min-height:356px;
+            }
+        }
+
+    }
+    @include at-breakpoint($break2){
+        @include pre(1, 12);
+        @include span-columns(10 omega, 12);
+        @include post(1, 12);
+        &>section{
+            @include span-columns($total-columns omega);
+            &>h1{
+                font-size:35px;
+            }
+            &>a{
+                font-size:15px;
+            }
+            &>#forbidden{
+                @include pre(2, 12);
+                @include span-columns(8 omega, 12);
+                @include post(2, 12);
+                &>img{
+                    @include span-columns(4, 8);
+                }
+                &>#youdidnt{
+                    @include span-columns(4 omega, 8);
+                    max-height:356px;
+                    min-height:356px;
+                }
+            }
+        }
+
+    }
+    @include at-breakpoint($break3){
+        @include pre(4, 16);
+        @include span-columns(8 omega, 16);
+        @include post(4, 16);
+        &>section{
+            @include span-columns($total-columns omega);
+            &>h1{
+                font-size:35px;
+            }
+            &>a{
+                font-size:15px;
+            }
+            &>#forbidden{
+                @include pre(2, 12);
+                @include span-columns(8 omega, 12);
+                @include post(2, 12);
+                &>img{
+                    @include span-columns(4, 8);
+                }
+                &>#youdidnt{
+                    @include span-columns(4 omega, 8);
+                    max-height:356px;
+                    min-height:356px;
+                }
+            }
+        }
+
+    }
+}

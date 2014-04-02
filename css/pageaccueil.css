@@ -1,0 +1,1031 @@
+/* line 17, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 16, ../sass/pageaccueil.scss */
+body {
+  background-image: url(../img/pattern1.png);
+  font-family: "Open Sans",arial,sans-serif;
+}
+
+/* line 20, ../sass/pageaccueil.scss */
+body > #page {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *zoom: 1;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+body > #page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 24, ../sass/pageaccueil.scss */
+body > #page #banniere {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  background: #3498db;
+  color: white;
+  height: 100px;
+  position: relative;
+  box-shadow: 3px 3px 5px 2px #7f8c8d;
+}
+/* line 31, ../sass/pageaccueil.scss */
+body > #page #banniere > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 35, ../sass/pageaccueil.scss */
+body > #page #banniere > img:hover {
+  cursor: pointer;
+}
+/* line 39, ../sass/pageaccueil.scss */
+body > #page #banniere > h1 {
+  font-size: 3em;
+  font-family: 'Give You Glory', cursive;
+  text-align: center;
+  padding-top: 3%;
+}
+/* line 46, ../sass/pageaccueil.scss */
+body > #page a {
+  text-decoration: none;
+}
+/* line 49, ../sass/pageaccueil.scss */
+body > #page .bx-wrapper > img {
+  width: 100%;
+}
+/* line 52, ../sass/pageaccueil.scss */
+body > #page .bxslider > li > a {
+  position: relative;
+  text-decoration: none;
+}
+/* line 56, ../sass/pageaccueil.scss */
+body > #page .bxslider > li > ul.bandeau {
+  background: black;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2%;
+  display: block;
+}
+/* line 65, ../sass/pageaccueil.scss */
+body > #page .bxslider > li > ul.bandeau > li {
+  width: 24.42748%;
+  float: left;
+  margin-right: 0.76336%;
+  display: inline;
+  display: inline;
+  float: left;
+  color: white;
+  text-align: center;
+}
+/* line 71, ../sass/pageaccueil.scss */
+body > #page .bxslider > li > ul.bandeau > li:last-child {
+  width: 24.42748%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 76, ../sass/pageaccueil.scss */
+body > #page > #list {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 78, ../sass/pageaccueil.scss */
+body > #page > #list > section {
+  background: white;
+  box-shadow: 3px 3px 5px 2px #7f8c8d;
+  margin-bottom: 1%;
+  margin-top: 2%;
+}
+/* line 83, ../sass/pageaccueil.scss */
+body > #page > #list > section > h2 {
+  padding: 1%;
+  margin-bottom: 2%;
+}
+/* line 88, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 1%;
+  background: white;
+  box-shadow: 3px 3px 5px 2px #7f8c8d;
+}
+/* line 96, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories > h2 {
+  font-size: 2.5em;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+/* line 101, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories > ul {
+  padding: 2%;
+}
+/* line 103, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories > ul > li {
+  width: 48.83721%;
+  float: left;
+  margin-right: 2.32558%;
+  display: inline;
+  font-size: 2.5em;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+/* line 108, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories > ul > li:nth-child(2n) {
+  width: 48.83721%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 111, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories > ul > li > a {
+  padding-left: 3%;
+  color: black;
+}
+/* line 116, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories > ul > li:hover {
+  background: #c0392b;
+}
+/* line 118, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories > ul > li:hover > a {
+  color: white;
+}
+/* line 125, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #categories > a > button {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  border: 1px ridge #3498db;
+  background: #3498db;
+  margin-top: 3%;
+  margin-bottom: 1%;
+  padding: 4%;
+  font-size: 2.5em;
+  border-radius: 1px;
+  color: white;
+}
+/* line 139, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #flprojets > .bx-slider {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 142, ../sass/pageaccueil.scss */
+body > #page > #list > #main > #flprojets > h2 {
+  font-size: 2.5em;
+  padding-top: 3%;
+  padding-left: 3%;
+  margin-bottom: 2%;
+}
+/* line 149, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox, body > #page > #list #projetspop, body > #page > #list #mentors {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 151, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox .bx-wrapper, body > #page > #list #projetspop .bx-wrapper, body > #page > #list #mentors .bx-wrapper {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 153, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox .bx-wrapper > .bx-viewport, body > #page > #list #projetspop .bx-wrapper > .bx-viewport, body > #page > #list #mentors .bx-wrapper > .bx-viewport {
+  box-shadow: none;
+}
+/* line 157, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox > #null, body > #page > #list #projetspop > #null, body > #page > #list #mentors > #null {
+  text-align: center;
+}
+/* line 159, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox > #null > img, body > #page > #list #projetspop > #null > img, body > #page > #list #mentors > #null > img {
+  vertical-align: middle;
+}
+/* line 163, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox > h2, body > #page > #list #projetspop > h2, body > #page > #list #mentors > h2 {
+  font-size: 2.5em;
+  padding-top: 2%;
+  padding-left: 3%;
+  margin-bottom: 2%;
+}
+/* line 168, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox > h2 > a, body > #page > #list #projetspop > h2 > a, body > #page > #list #mentors > h2 > a {
+  width: 23.25581%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  background: #c0392b;
+  color: white;
+  font-size: 0.8em;
+  padding: 1%;
+  text-align: center;
+}
+/* line 178, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li, body > #page > #list > #projetsprox #pop > li, body > #page > #list > #projetsprox #ment > li, body > #page > #list #projetspop #prox > li, body > #page > #list #projetspop #pop > li, body > #page > #list #projetspop #ment > li, body > #page > #list #mentors #prox > li, body > #page > #list #mentors #pop > li, body > #page > #list #mentors #ment > li {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  padding: 0.5%;
+}
+/* line 181, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a, body > #page > #list > #projetsprox #pop > li > a, body > #page > #list > #projetsprox #ment > li > a, body > #page > #list #projetspop #prox > li > a, body > #page > #list #projetspop #pop > li > a, body > #page > #list #projetspop #ment > li > a, body > #page > #list #mentors #prox > li > a, body > #page > #list #mentors #pop > li > a, body > #page > #list #mentors #ment > li > a {
+  color: black;
+}
+/* line 183, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article, body > #page > #list > #projetsprox #pop > li > a > article, body > #page > #list > #projetsprox #ment > li > a > article, body > #page > #list #projetspop #prox > li > a > article, body > #page > #list #projetspop #pop > li > a > article, body > #page > #list #projetspop #ment > li > a > article, body > #page > #list #mentors #prox > li > a > article, body > #page > #list #mentors #pop > li > a > article, body > #page > #list #mentors #ment > li > a > article {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid #fff;
+  box-shadow: 0px 0px 0px 1px #DCDCDC;
+  background: white;
+  font-size: 2.5em;
+  margin-bottom: 7px;
+}
+/* line 193, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > #photo, body > #page > #list > #projetsprox #pop > li > a > article > #photo, body > #page > #list > #projetsprox #ment > li > a > article > #photo, body > #page > #list #projetspop #prox > li > a > article > #photo, body > #page > #list #projetspop #pop > li > a > article > #photo, body > #page > #list #projetspop #ment > li > a > article > #photo, body > #page > #list #mentors #prox > li > a > article > #photo, body > #page > #list #mentors #pop > li > a > article > #photo, body > #page > #list #mentors #ment > li > a > article > #photo {
+  position: relative;
+}
+/* line 195, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > #photo > #desc, body > #page > #list > #projetsprox #pop > li > a > article > #photo > #desc, body > #page > #list > #projetsprox #ment > li > a > article > #photo > #desc, body > #page > #list #projetspop #prox > li > a > article > #photo > #desc, body > #page > #list #projetspop #pop > li > a > article > #photo > #desc, body > #page > #list #projetspop #ment > li > a > article > #photo > #desc, body > #page > #list #mentors #prox > li > a > article > #photo > #desc, body > #page > #list #mentors #pop > li > a > article > #photo > #desc, body > #page > #list #mentors #ment > li > a > article > #photo > #desc {
+  position: absolute;
+  background: black;
+  opacity: 0.7;
+  top: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+/* line 204, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > #photo > img, body > #page > #list > #projetsprox #pop > li > a > article > #photo > img, body > #page > #list > #projetsprox #ment > li > a > article > #photo > img, body > #page > #list #projetspop #prox > li > a > article > #photo > img, body > #page > #list #projetspop #pop > li > a > article > #photo > img, body > #page > #list #projetspop #ment > li > a > article > #photo > img, body > #page > #list #mentors #prox > li > a > article > #photo > img, body > #page > #list #mentors #pop > li > a > article > #photo > img, body > #page > #list #mentors #ment > li > a > article > #photo > img {
+  width: 23.25581%;
+  float: left;
+  margin-right: 2.32558%;
+  display: inline;
+}
+/* line 208, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > div:nth-child(2), body > #page > #list > #projetsprox #pop > li > a > article > div:nth-child(2), body > #page > #list > #projetsprox #ment > li > a > article > div:nth-child(2), body > #page > #list #projetspop #prox > li > a > article > div:nth-child(2), body > #page > #list #projetspop #pop > li > a > article > div:nth-child(2), body > #page > #list #projetspop #ment > li > a > article > div:nth-child(2), body > #page > #list #mentors #prox > li > a > article > div:nth-child(2), body > #page > #list #mentors #pop > li > a > article > div:nth-child(2), body > #page > #list #mentors #ment > li > a > article > div:nth-child(2) {
+  width: 74.4186%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 210, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #titre, body > #page > #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #titre, body > #page > #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #titre, body > #page > #list #projetspop #prox > li > a > article > div:nth-child(2) > #titre, body > #page > #list #projetspop #pop > li > a > article > div:nth-child(2) > #titre, body > #page > #list #projetspop #ment > li > a > article > div:nth-child(2) > #titre, body > #page > #list #mentors #prox > li > a > article > div:nth-child(2) > #titre, body > #page > #list #mentors #pop > li > a > article > div:nth-child(2) > #titre, body > #page > #list #mentors #ment > li > a > article > div:nth-child(2) > #titre {
+  font-weight: bold;
+  margin-left: 5%;
+}
+/* line 213, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #titre:first-letter, body > #page > #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #titre:first-letter, body > #page > #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #titre:first-letter, body > #page > #list #projetspop #prox > li > a > article > div:nth-child(2) > #titre:first-letter, body > #page > #list #projetspop #pop > li > a > article > div:nth-child(2) > #titre:first-letter, body > #page > #list #projetspop #ment > li > a > article > div:nth-child(2) > #titre:first-letter, body > #page > #list #mentors #prox > li > a > article > div:nth-child(2) > #titre:first-letter, body > #page > #list #mentors #pop > li > a > article > div:nth-child(2) > #titre:first-letter, body > #page > #list #mentors #ment > li > a > article > div:nth-child(2) > #titre:first-letter {
+  text-transform: uppercase;
+}
+/* line 217, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #but, body > #page > #list > #projetsprox #prox > li > a > article > div:nth-child(2) #recu, body > #page > #list > #projetsprox #prox > li > a > article > div:nth-child(2) #tps, body > #page > #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #but, body > #page > #list > #projetsprox #pop > li > a > article > div:nth-child(2) #recu, body > #page > #list > #projetsprox #pop > li > a > article > div:nth-child(2) #tps, body > #page > #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #but, body > #page > #list > #projetsprox #ment > li > a > article > div:nth-child(2) #recu, body > #page > #list > #projetsprox #ment > li > a > article > div:nth-child(2) #tps, body > #page > #list #projetspop #prox > li > a > article > div:nth-child(2) > #but, body > #page > #list #projetspop #prox > li > a > article > div:nth-child(2) #recu, body > #page > #list #projetspop #prox > li > a > article > div:nth-child(2) #tps, body > #page > #list #projetspop #pop > li > a > article > div:nth-child(2) > #but, body > #page > #list #projetspop #pop > li > a > article > div:nth-child(2) #recu, body > #page > #list #projetspop #pop > li > a > article > div:nth-child(2) #tps, body > #page > #list #projetspop #ment > li > a > article > div:nth-child(2) > #but, body > #page > #list #projetspop #ment > li > a > article > div:nth-child(2) #recu, body > #page > #list #projetspop #ment > li > a > article > div:nth-child(2) #tps, body > #page > #list #mentors #prox > li > a > article > div:nth-child(2) > #but, body > #page > #list #mentors #prox > li > a > article > div:nth-child(2) #recu, body > #page > #list #mentors #prox > li > a > article > div:nth-child(2) #tps, body > #page > #list #mentors #pop > li > a > article > div:nth-child(2) > #but, body > #page > #list #mentors #pop > li > a > article > div:nth-child(2) #recu, body > #page > #list #mentors #pop > li > a > article > div:nth-child(2) #tps, body > #page > #list #mentors #ment > li > a > article > div:nth-child(2) > #but, body > #page > #list #mentors #ment > li > a > article > div:nth-child(2) #recu, body > #page > #list #mentors #ment > li > a > article > div:nth-child(2) #tps {
+  padding-left: 5%;
+  color: #7f8c8d;
+  font-size: 0.8em;
+}
+/* line 222, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #recu, body > #page > #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #recu, body > #page > #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #recu, body > #page > #list #projetspop #prox > li > a > article > div:nth-child(2) > #recu, body > #page > #list #projetspop #pop > li > a > article > div:nth-child(2) > #recu, body > #page > #list #projetspop #ment > li > a > article > div:nth-child(2) > #recu, body > #page > #list #mentors #prox > li > a > article > div:nth-child(2) > #recu, body > #page > #list #mentors #pop > li > a > article > div:nth-child(2) > #recu, body > #page > #list #mentors #ment > li > a > article > div:nth-child(2) > #recu {
+  width: 65.625%;
+  float: left;
+  margin-right: 3.125%;
+  display: inline;
+}
+/* line 225, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #tps, body > #page > #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #tps, body > #page > #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #tps, body > #page > #list #projetspop #prox > li > a > article > div:nth-child(2) > #tps, body > #page > #list #projetspop #pop > li > a > article > div:nth-child(2) > #tps, body > #page > #list #projetspop #ment > li > a > article > div:nth-child(2) > #tps, body > #page > #list #mentors #prox > li > a > article > div:nth-child(2) > #tps, body > #page > #list #mentors #pop > li > a > article > div:nth-child(2) > #tps, body > #page > #list #mentors #ment > li > a > article > div:nth-child(2) > #tps {
+  width: 31.25%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  text-align: right;
+}
+/* line 230, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > #amount, body > #page > #list > #projetsprox #pop > li > a > article > #amount, body > #page > #list > #projetsprox #ment > li > a > article > #amount, body > #page > #list #projetspop #prox > li > a > article > #amount, body > #page > #list #projetspop #pop > li > a > article > #amount, body > #page > #list #projetspop #ment > li > a > article > #amount, body > #page > #list #mentors #prox > li > a > article > #amount, body > #page > #list #mentors #pop > li > a > article > #amount, body > #page > #list #mentors #ment > li > a > article > #amount {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  margin-top: 3%;
+}
+/* line 233, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > #amount > strong, body > #page > #list > #projetsprox #pop > li > a > article > #amount > strong, body > #page > #list > #projetsprox #ment > li > a > article > #amount > strong, body > #page > #list #projetspop #prox > li > a > article > #amount > strong, body > #page > #list #projetspop #pop > li > a > article > #amount > strong, body > #page > #list #projetspop #ment > li > a > article > #amount > strong, body > #page > #list #mentors #prox > li > a > article > #amount > strong, body > #page > #list #mentors #pop > li > a > article > #amount > strong, body > #page > #list #mentors #ment > li > a > article > #amount > strong {
+  width: 23.25581%;
+  float: left;
+  margin-right: 2.32558%;
+  display: inline;
+  font-weight: bold;
+  text-align: center;
+}
+/* line 238, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #prox > li > a > article > #amount > meter, body > #page > #list > #projetsprox #pop > li > a > article > #amount > meter, body > #page > #list > #projetsprox #ment > li > a > article > #amount > meter, body > #page > #list #projetspop #prox > li > a > article > #amount > meter, body > #page > #list #projetspop #pop > li > a > article > #amount > meter, body > #page > #list #projetspop #ment > li > a > article > #amount > meter, body > #page > #list #mentors #prox > li > a > article > #amount > meter, body > #page > #list #mentors #pop > li > a > article > #amount > meter, body > #page > #list #mentors #ment > li > a > article > #amount > meter {
+  width: 74.4186%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 246, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #ment > li > a > article, body > #page > #list #projetspop #ment > li > a > article, body > #page > #list #mentors #ment > li > a > article {
+  width: 48.83721%;
+  float: left;
+  margin-right: 2.32558%;
+  display: inline;
+  margin: 0;
+}
+/* line 249, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #ment > li > a > article > #photo > img, body > #page > #list #projetspop #ment > li > a > article > #photo > img, body > #page > #list #mentors #ment > li > a > article > #photo > img {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 252, ../sass/pageaccueil.scss */
+body > #page > #list > #projetsprox #ment > li > a > article:nth-child(2n), body > #page > #list #projetspop #ment > li > a > article:nth-child(2n), body > #page > #list #mentors #ment > li > a > article:nth-child(2n) {
+  width: 48.83721%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+@media (min-width: 1024px) and (max-width: 1152px) {
+  /* line 261, ../sass/pageaccueil.scss */
+  body > #page #banniere > h1 {
+    font-family: 'Give You Glory', cursive;
+    font-size: 30px;
+  }
+  /* line 265, ../sass/pageaccueil.scss */
+  body > #page .bxslider > li > ul.bandeau > li {
+    font-size: 13px;
+  }
+  /* line 268, ../sass/pageaccueil.scss */
+  body > #page #list {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 271, ../sass/pageaccueil.scss */
+  body > #page #list > section {
+    box-shadow: 3px 3px 5px 2px #7f8c8d;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  /* line 276, ../sass/pageaccueil.scss */
+  body > #page #list > #main {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 278, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets {
+    width: 74.71264%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+  /* line 280, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets > .bx-wrapper {
+    width: 620px;
+  }
+  /* line 284, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets > h2 {
+    font-size: 14px;
+    margin-bottom: 2%;
+  }
+  /* line 288, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets > .bx-wrapper {
+    margin-left: 2%;
+  }
+  /* line 292, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories {
+    width: 24.13793%;
+    float: right;
+    margin-right: 0;
+    box-shadow: none;
+  }
+  /* line 295, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > h2 {
+    font-size: 14px;
+    margin-bottom: 2%;
+    margin-top: 4%;
+  }
+  /* line 300, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul {
+    margin-top: 6%;
+  }
+  /* line 302, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul > li {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    padding: 2%;
+    font-size: 14px;
+  }
+  /* line 306, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul > li:nth-child(2n) {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 311, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > a > button {
+    padding: 8%;
+    font-size: 15px;
+  }
+  /* line 317, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox, body > #page #list #projetspop, body > #page #list #mentors {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 319, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2, body > #page #list #projetspop > h2, body > #page #list #mentors > h2 {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  /* line 327, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > p, body > #page #list #projetspop > h2 > p, body > #page #list #mentors > h2 > p {
+    width: 83.20611%;
+    float: left;
+    margin-right: 0.76336%;
+  }
+  /* line 330, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > a, body > #page #list #projetspop > h2 > a, body > #page #list #mentors > h2 > a {
+    width: 12.21374%;
+    float: right;
+    margin-right: 0;
+    background: #c0392b;
+    font-size: 12px;
+    text-shadow: none;
+    color: white;
+    padding: 1%;
+    margin-top: -1%;
+  }
+  /* line 338, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > a:hover, body > #page #list #projetspop > h2 > a:hover, body > #page #list #mentors > h2 > a:hover {
+    cursor: pointer;
+  }
+  /* line 343, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox .bx-wrapper, body > #page #list #projetspop .bx-wrapper, body > #page #list #mentors .bx-wrapper {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 345, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox .bx-wrapper > .bx-viewport, body > #page #list #projetspop .bx-wrapper > .bx-viewport, body > #page #list #mentors .bx-wrapper > .bx-viewport {
+    box-shadow: none;
+  }
+  /* line 351, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li, body > #page #list > #projetsprox #pop > li, body > #page #list > #projetsprox #ment > li, body > #page #list #projetspop #prox > li, body > #page #list #projetspop #pop > li, body > #page #list #projetspop #ment > li, body > #page #list #mentors #prox > li, body > #page #list #mentors #pop > li, body > #page #list #mentors #ment > li {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 354, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article, body > #page #list > #projetsprox #pop > li > a > article, body > #page #list > #projetsprox #ment > li > a > article, body > #page #list #projetspop #prox > li > a > article, body > #page #list #projetspop #pop > li > a > article, body > #page #list #projetspop #ment > li > a > article, body > #page #list #mentors #prox > li > a > article, body > #page #list #mentors #pop > li > a > article, body > #page #list #mentors #ment > li > a > article {
+    width: 24.42748%;
+    float: left;
+    margin-right: 0.76336%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 0px 1px #DCDCDC;
+    font-size: 13px;
+  }
+  /* line 363, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > #photo > img, body > #page #list > #projetsprox #pop > li > a > article > #photo > img, body > #page #list > #projetsprox #ment > li > a > article > #photo > img, body > #page #list #projetspop #prox > li > a > article > #photo > img, body > #page #list #projetspop #pop > li > a > article > #photo > img, body > #page #list #projetspop #ment > li > a > article > #photo > img, body > #page #list #mentors #prox > li > a > article > #photo > img, body > #page #list #mentors #pop > li > a > article > #photo > img, body > #page #list #mentors #ment > li > a > article > #photo > img {
+    width: 100%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+  /* line 367, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2), body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2), body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2), body > #page #list #projetspop #prox > li > a > article > div:nth-child(2), body > #page #list #projetspop #pop > li > a > article > div:nth-child(2), body > #page #list #projetspop #ment > li > a > article > div:nth-child(2), body > #page #list #mentors #prox > li > a > article > div:nth-child(2), body > #page #list #mentors #pop > li > a > article > div:nth-child(2), body > #page #list #mentors #ment > li > a > article > div:nth-child(2) {
+    width: 100%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+  /* line 369, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) > #titre {
+    margin-top: 5%;
+    padding-left: 5%;
+  }
+  /* line 373, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #tps, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #tps, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #tps {
+    margin-left: 0;
+  }
+  /* line 379, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a:nth-child(4n) > article, body > #page #list > #projetsprox #pop > li > a:nth-child(4n) > article, body > #page #list > #projetsprox #ment > li > a:nth-child(4n) > article, body > #page #list #projetspop #prox > li > a:nth-child(4n) > article, body > #page #list #projetspop #pop > li > a:nth-child(4n) > article, body > #page #list #projetspop #ment > li > a:nth-child(4n) > article, body > #page #list #mentors #prox > li > a:nth-child(4n) > article, body > #page #list #mentors #pop > li > a:nth-child(4n) > article, body > #page #list #mentors #ment > li > a:nth-child(4n) > article {
+    width: 24.42748%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1152px) and (max-width: 1854px) {
+  /* line 392, ../sass/pageaccueil.scss */
+  body > #page #banniere > h1 {
+    font-family: 'Give You Glory', cursive;
+    font-size: 30px;
+  }
+  /* line 396, ../sass/pageaccueil.scss */
+  body > #page .bxslider > li > ul.bandeau {
+    display: none;
+  }
+  /* line 398, ../sass/pageaccueil.scss */
+  body > #page .bxslider > li > ul.bandeau > li {
+    font-size: 15px;
+  }
+  /* line 403, ../sass/pageaccueil.scss */
+  body > #page #list {
+    margin-left: 8.39695%;
+    width: 83.20611%;
+    float: left;
+    margin-right: 0.76336%;
+    margin-right: 8.39695%;
+  }
+  /* line 408, ../sass/pageaccueil.scss */
+  body > #page #list > section {
+    box-shadow: 3px 3px 5px 2px #7f8c8d;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  /* line 414, ../sass/pageaccueil.scss */
+  body > #page #list > #main {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 416, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets {
+    width: 66.41221%;
+    float: left;
+    margin-right: 0.76336%;
+    background: white;
+  }
+  /* line 419, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets > h2 {
+    font-size: 14px;
+    padding-top: 3%;
+    padding-left: 3%;
+    margin-bottom: 2%;
+  }
+  /* line 425, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets > .bx-wrapper {
+    width: 620px;
+    margin-left: 6%;
+  }
+  /* line 430, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories {
+    width: 29.00763%;
+    float: right;
+    margin-right: 0;
+    box-shadow: none;
+  }
+  /* line 433, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > h2 {
+    font-size: 14px;
+    margin-top: 3%;
+  }
+  /* line 437, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul > li {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    padding: 2%;
+    font-size: 13px;
+  }
+  /* line 441, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul > li > a {
+    padding-left: 2%;
+  }
+  /* line 444, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul > li:nth-child(2n) {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 448, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > a > button {
+    padding: 6%;
+    font-size: 15px;
+  }
+  /* line 451, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > a > button:hover {
+    cursor: pointer;
+  }
+  /* line 455, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > a > button > a {
+    font-size: 17px;
+    width: 100%;
+  }
+  /* line 463, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox, body > #page #list #projetspop, body > #page #list #mentors {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 466, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2, body > #page #list #projetspop > h2, body > #page #list #mentors > h2 {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  /* line 469, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > p, body > #page #list #projetspop > h2 > p, body > #page #list #mentors > h2 > p {
+    width: 83.20611%;
+    float: left;
+    margin-right: 0.76336%;
+  }
+  /* line 472, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > a, body > #page #list #projetspop > h2 > a, body > #page #list #mentors > h2 > a {
+    width: 12.21374%;
+    float: right;
+    margin-right: 0;
+    background: #c0392b;
+    font-size: 12px;
+    text-shadow: none;
+    color: white;
+    padding: 1%;
+    margin-top: -1%;
+  }
+  /* line 480, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > a:hover, body > #page #list #projetspop > h2 > a:hover, body > #page #list #mentors > h2 > a:hover {
+    cursor: pointer;
+  }
+  /* line 485, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox .bx-wrapper, body > #page #list #projetspop .bx-wrapper, body > #page #list #mentors .bx-wrapper {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 487, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox .bx-wrapper > .bx-viewport, body > #page #list #projetspop .bx-wrapper > .bx-viewport, body > #page #list #mentors .bx-wrapper > .bx-viewport {
+    box-shadow: none;
+  }
+  /* line 493, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li, body > #page #list > #projetsprox #pop > li, body > #page #list > #projetsprox #ment > li, body > #page #list #projetspop #prox > li, body > #page #list #projetspop #pop > li, body > #page #list #projetspop #ment > li, body > #page #list #mentors #prox > li, body > #page #list #mentors #pop > li, body > #page #list #mentors #ment > li {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 496, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article, body > #page #list > #projetsprox #pop > li > a > article, body > #page #list > #projetsprox #ment > li > a > article, body > #page #list #projetspop #prox > li > a > article, body > #page #list #projetspop #pop > li > a > article, body > #page #list #projetspop #ment > li > a > article, body > #page #list #mentors #prox > li > a > article, body > #page #list #mentors #pop > li > a > article, body > #page #list #mentors #ment > li > a > article {
+    width: 24.42748%;
+    float: left;
+    margin-right: 0.76336%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 0px 1px #DCDCDC;
+    font-size: 13px;
+  }
+  /* line 505, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > #photo > img, body > #page #list > #projetsprox #pop > li > a > article > #photo > img, body > #page #list > #projetsprox #ment > li > a > article > #photo > img, body > #page #list #projetspop #prox > li > a > article > #photo > img, body > #page #list #projetspop #pop > li > a > article > #photo > img, body > #page #list #projetspop #ment > li > a > article > #photo > img, body > #page #list #mentors #prox > li > a > article > #photo > img, body > #page #list #mentors #pop > li > a > article > #photo > img, body > #page #list #mentors #ment > li > a > article > #photo > img {
+    width: 100%;
+    float: left;
+    margin-right: 0.76336%;
+  }
+  /* line 509, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2), body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2), body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2), body > #page #list #projetspop #prox > li > a > article > div:nth-child(2), body > #page #list #projetspop #pop > li > a > article > div:nth-child(2), body > #page #list #projetspop #ment > li > a > article > div:nth-child(2), body > #page #list #mentors #prox > li > a > article > div:nth-child(2), body > #page #list #mentors #pop > li > a > article > div:nth-child(2), body > #page #list #mentors #ment > li > a > article > div:nth-child(2) {
+    width: 100%;
+    float: left;
+    margin-right: 0.76336%;
+  }
+  /* line 511, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) > #titre {
+    margin-top: 5%;
+    padding-left: 5%;
+  }
+  /* line 515, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #tps, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #tps, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #tps {
+    margin-left: 0;
+  }
+  /* line 521, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a:nth-child(4n) > article, body > #page #list > #projetsprox #pop > li > a:nth-child(4n) > article, body > #page #list > #projetsprox #ment > li > a:nth-child(4n) > article, body > #page #list #projetspop #prox > li > a:nth-child(4n) > article, body > #page #list #projetspop #pop > li > a:nth-child(4n) > article, body > #page #list #projetspop #ment > li > a:nth-child(4n) > article, body > #page #list #mentors #prox > li > a:nth-child(4n) > article, body > #page #list #mentors #pop > li > a:nth-child(4n) > article, body > #page #list #mentors #ment > li > a:nth-child(4n) > article {
+    width: 24.42748%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1855px) {
+  /* line 534, ../sass/pageaccueil.scss */
+  body > #page #banniere > h1 {
+    font-family: 'Give You Glory', cursive;
+    font-size: 30px;
+  }
+  /* line 538, ../sass/pageaccueil.scss */
+  body > #page .bxslider > li > ul.bandeau {
+    display: none;
+  }
+  /* line 540, ../sass/pageaccueil.scss */
+  body > #page .bxslider > li > ul.bandeau > li {
+    font-size: 15px;
+  }
+  /* line 544, ../sass/pageaccueil.scss */
+  body > #page #banniere {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    background: #3498db;
+    color: white;
+    height: 100px;
+    position: relative;
+    box-shadow: 3px 3px 5px 2px #7f8c8d;
+  }
+  /* line 551, ../sass/pageaccueil.scss */
+  body > #page #banniere > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  /* line 555, ../sass/pageaccueil.scss */
+  body > #page #banniere > img:hover {
+    cursor: pointer;
+  }
+  /* line 559, ../sass/pageaccueil.scss */
+  body > #page #banniere > h1 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 3%;
+  }
+  /* line 565, ../sass/pageaccueil.scss */
+  body > #page #list {
+    margin-left: 25.14286%;
+    width: 49.71429%;
+    float: left;
+    margin-right: 0.57143%;
+    margin-right: 25.14286%;
+  }
+  /* line 570, ../sass/pageaccueil.scss */
+  body > #page #list > section {
+    box-shadow: 3px 3px 5px 2px #7f8c8d;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  /* line 576, ../sass/pageaccueil.scss */
+  body > #page #list > #main {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 578, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets {
+    width: 66.41221%;
+    float: left;
+    margin-right: 0.76336%;
+    background: white;
+  }
+  /* line 581, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets > h2 {
+    font-size: 17px;
+    padding-top: 3%;
+    padding-left: 3%;
+    margin-bottom: 2%;
+  }
+  /* line 587, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #flprojets > .bx-wrapper {
+    width: 620px;
+    margin-left: 4%;
+  }
+  /* line 592, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories {
+    width: 29.00763%;
+    float: right;
+    margin-right: 0;
+    box-shadow: none;
+  }
+  /* line 595, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > h2 {
+    font-size: 17px;
+    margin-top: 3%;
+  }
+  /* line 599, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul > li {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    padding: 2%;
+    font-size: 13px;
+  }
+  /* line 603, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul > li > a {
+    padding-left: 2%;
+  }
+  /* line 606, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > ul > li:nth-child(2n) {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 610, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > a > button {
+    padding: 6%;
+    font-size: 15px;
+  }
+  /* line 613, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > a > button:hover {
+    cursor: pointer;
+  }
+  /* line 617, ../sass/pageaccueil.scss */
+  body > #page #list > #main > #categories > a > button > a {
+    font-size: 17px;
+    width: 100%;
+  }
+  /* line 625, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox, body > #page #list #projetspop, body > #page #list #mentors {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 628, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2, body > #page #list #projetspop > h2, body > #page #list #mentors > h2 {
+    font-size: 17px;
+    margin-top: 0;
+  }
+  /* line 631, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > p, body > #page #list #projetspop > h2 > p, body > #page #list #mentors > h2 > p {
+    width: 83.20611%;
+    float: left;
+    margin-right: 0.76336%;
+  }
+  /* line 634, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > a, body > #page #list #projetspop > h2 > a, body > #page #list #mentors > h2 > a {
+    width: 12.21374%;
+    float: right;
+    margin-right: 0;
+    background: #c0392b;
+    font-size: 12px;
+    text-shadow: none;
+    color: white;
+    padding: 1%;
+    margin-top: -1%;
+  }
+  /* line 642, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox > h2 > a:hover, body > #page #list #projetspop > h2 > a:hover, body > #page #list #mentors > h2 > a:hover {
+    cursor: pointer;
+  }
+  /* line 647, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox .bx-wrapper, body > #page #list #projetspop .bx-wrapper, body > #page #list #mentors .bx-wrapper {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 649, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox .bx-wrapper > .bx-viewport, body > #page #list #projetspop .bx-wrapper > .bx-viewport, body > #page #list #mentors .bx-wrapper > .bx-viewport {
+    box-shadow: none;
+  }
+  /* line 655, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li, body > #page #list > #projetsprox #pop > li, body > #page #list > #projetsprox #ment > li, body > #page #list #projetspop #prox > li, body > #page #list #projetspop #pop > li, body > #page #list #projetspop #ment > li, body > #page #list #mentors #prox > li, body > #page #list #mentors #pop > li, body > #page #list #mentors #ment > li {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 658, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article, body > #page #list > #projetsprox #pop > li > a > article, body > #page #list > #projetsprox #ment > li > a > article, body > #page #list #projetspop #prox > li > a > article, body > #page #list #projetspop #pop > li > a > article, body > #page #list #projetspop #ment > li > a > article, body > #page #list #mentors #prox > li > a > article, body > #page #list #mentors #pop > li > a > article, body > #page #list #mentors #ment > li > a > article {
+    width: 24.42748%;
+    float: left;
+    margin-right: 0.76336%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 0px 1px #DCDCDC;
+    font-size: 13px;
+  }
+  /* line 667, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > #photo > img, body > #page #list > #projetsprox #pop > li > a > article > #photo > img, body > #page #list > #projetsprox #ment > li > a > article > #photo > img, body > #page #list #projetspop #prox > li > a > article > #photo > img, body > #page #list #projetspop #pop > li > a > article > #photo > img, body > #page #list #projetspop #ment > li > a > article > #photo > img, body > #page #list #mentors #prox > li > a > article > #photo > img, body > #page #list #mentors #pop > li > a > article > #photo > img, body > #page #list #mentors #ment > li > a > article > #photo > img {
+    width: 100%;
+    float: left;
+    margin-right: 0.57143%;
+  }
+  /* line 671, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2), body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2), body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2), body > #page #list #projetspop #prox > li > a > article > div:nth-child(2), body > #page #list #projetspop #pop > li > a > article > div:nth-child(2), body > #page #list #projetspop #ment > li > a > article > div:nth-child(2), body > #page #list #mentors #prox > li > a > article > div:nth-child(2), body > #page #list #mentors #pop > li > a > article > div:nth-child(2), body > #page #list #mentors #ment > li > a > article > div:nth-child(2) {
+    width: 100%;
+    float: left;
+    margin-right: 0.57143%;
+  }
+  /* line 673, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) > #titre {
+    margin-top: 5%;
+    padding-left: 5%;
+  }
+  /* line 677, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #prox > li > a > article > div:nth-child(2) #tps, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #pop > li > a > article > div:nth-child(2) #tps, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #but, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #recu, body > #page #list > #projetsprox #ment > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #prox > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #pop > li > a > article > div:nth-child(2) #tps, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #but, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #recu, body > #page #list #projetspop #ment > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #prox > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #pop > li > a > article > div:nth-child(2) #tps, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) > #titre, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #but, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #recu, body > #page #list #mentors #ment > li > a > article > div:nth-child(2) #tps {
+    margin-left: 0;
+  }
+  /* line 683, ../sass/pageaccueil.scss */
+  body > #page #list > #projetsprox #prox > li > a:nth-child(4n) > article, body > #page #list > #projetsprox #pop > li > a:nth-child(4n) > article, body > #page #list > #projetsprox #ment > li > a:nth-child(4n) > article, body > #page #list #projetspop #prox > li > a:nth-child(4n) > article, body > #page #list #projetspop #pop > li > a:nth-child(4n) > article, body > #page #list #projetspop #ment > li > a:nth-child(4n) > article, body > #page #list #mentors #prox > li > a:nth-child(4n) > article, body > #page #list #mentors #pop > li > a:nth-child(4n) > article, body > #page #list #mentors #ment > li > a:nth-child(4n) > article {
+    width: 24.42748%;
+    float: right;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,312 @@
+@import "susy";
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;
+$gutter-width: 0.2em;
+$grid-padding: 0.2em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12 1854px;
+$break3:1855px 16;
+
+
+body{
+    background-image: url("/www/moine7u/amtj-fmp/img/pattern1.png");
+    font-family: "Open Sans",arial,sans-serif;
+}
+body>#page{
+    @include box-sizing(border-box);
+    @include container($total-columns,$break1,$break2, $break3);
+    section{     
+        &>h1{
+            @include span-columns($total-columns omega);
+            text-align: center;
+            font-size: 5em;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            font-family: 'Give You Glory', cursive;
+        }
+        &>section {
+
+            @include span-columns($total-columns omega); 
+            background: white;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+            margin-bottom:2%;
+            &>form{
+                &>article{
+
+                    &>label {
+                        @include span-columns($total-columns omega);
+                        color: #2980b9;
+                        text-align: center;
+                        font-size: 2.5em;
+                        margin-top: 2%;
+                    }
+                    &>input, select {
+                        @include span-columns($total-columns omega);
+                        padding:1%;
+                        font-size: 2.7em;
+                        margin-bottom: 3%;
+                        margin-top: 1%;
+                        width: 96%;
+                        margin-right: 2%;
+
+                    }
+                }
+                &>ul {
+                    @include span-columns($total-columns omega);
+                    margin:2% 0;
+                    &>li {
+                        @include span-columns(2,4);
+                        display: inline;
+
+
+                        &>input {
+                            @include span-columns($total-columns);
+                            border:1px ridge #2ecc71;  
+                            background:#2ecc71;
+                            color:white;
+                            padding:2%;
+                            font-size: 3em;
+                            width: 98%;
+                            margin-left:2%;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                        &:nth-child(2) {
+                            @include span-columns(2 omega,4);                                
+                            &>input {
+                                border:1px ridge grey;
+                                background: grey;
+                                width: 98%;
+                                margin-left:0;
+                                margin-right:2%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @include at-breakpoint($break1){
+        
+        section{
+            @include span-columns($total-columns omega);  
+            &>h1{
+                @include span-columns($total-columns omega); 
+                font-size: 50px;
+                font-family: 'Give You Glory', cursive;
+                text-align: center;
+                margin: 2% 0;
+
+            }
+            &>section{
+                @include span-columns($total-columns omega);
+                background: white;
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                &>form { 
+                    &>article{
+                        @include span-columns($total-columns omega);
+                        margin-top: 1%;
+                        &>label{
+                            font-size:13px;
+                        }
+                        &>input, select{
+                            @include pre(2,8);
+                            @include span-columns(4 omega,8);
+                            @include post(2,8);
+                            padding:1%;
+                            margin-bottom: 1%;
+                            margin-top: 1%;
+                            font-size:13px;
+                        }
+                    }
+                    &>ul{
+                        @include span-columns($total-columns omega);
+                        margin:2% 0;
+
+                        &>li {
+                            @include pre(2,8);
+                            @include span-columns(2,8);
+                            display: inline;
+                            &:nth-child(2) {
+                                @include pre(0);
+                                @include span-columns(2 omega,8);
+                                @include post(2,8);
+
+                                &>input {
+                                    background: grey;
+                                    border-color: grey;
+                                }
+                            }
+                            &>input {
+                                @include span-columns($total-columns);
+                                border:1px ridge #2ecc71;  
+                                background:#2ecc71;
+                                color:white;
+                                padding:2%;
+                                font-size: 15px;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }  
+                        }
+                    }
+                }
+            }
+        }  
+    } 
+
+    @include at-breakpoint($break2){
+        @include pre(1, 12);
+        @include span-columns(10 omega, 12);
+        @include post(1, 12);
+        section{
+            @include span-columns($total-columns omega);  
+            &>h1{
+                @include span-columns($total-columns omega); 
+
+                font-size: 50px;
+                font-family: 'Give You Glory', cursive;
+                text-align: center;
+                margin: 2% 0;
+
+            }
+            &>section{
+                @include span-columns($total-columns omega);
+                background: white;
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                &>form { 
+                    &>article{
+                        @include span-columns($total-columns omega);
+                        margin-top: 1%;
+                        &>label{
+                            font-size:13px;
+                        }
+                        &>input, select{
+                            @include pre(2,8);
+                            @include span-columns(4 omega,8);
+                            @include post(2,8);
+                            padding:1%;
+                            font-size: 13px;
+                            margin-bottom: 1%;
+                            margin-top: 1%;
+                        }
+                    }
+                    &>ul{
+                        @include span-columns($total-columns omega);
+                        margin:2% 0;
+
+                        &>li {
+                            @include pre(2,8);
+                            @include span-columns(2,8);
+                            display: inline;
+                            &:nth-child(2) {
+                                @include pre(0);
+                                @include span-columns(2 omega,8);
+                                @include post(2,8);
+
+                                &>input {
+                                    background: grey;
+                                    border-color: grey;
+
+                                }
+                            }
+                            &>input {
+                                @include span-columns($total-columns);
+                                border:1px ridge #2ecc71;  
+                                background:#2ecc71;
+                                color:white;
+                                padding:2%;
+                                font-size: 15px;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }  
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include at-breakpoint($break3){
+        @include pre(4, 16);
+        @include span-columns(8 omega, 16);
+        @include post(4, 16);
+        section{
+            @include span-columns($total-columns omega);  
+            &>h1{
+                @include span-columns($total-columns omega); 
+
+                font-size: 50px;
+                font-family: 'Give You Glory', cursive;
+                text-align: center;
+                margin: 2% 0;
+
+            }
+            &>section{
+                @include span-columns($total-columns omega);
+                background: white;
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                &>form { 
+                    &>article{
+                        @include span-columns($total-columns omega);
+                        margin-top: 1%;
+                        &>label{
+                            font-size:13px;
+                        }
+                        &>input, select{
+                            @include pre(2,8);
+                            @include span-columns(4 omega,8);
+                            @include post(2,8);
+                            padding:1%;
+                            font-size: 13px;
+                            margin-bottom: 1%;
+                            margin-top: 1%;
+                        }
+                    }
+                    &>ul{
+                        @include span-columns($total-columns omega);
+                        margin:2% 0;
+
+                        &>li {
+                            @include pre(2,8);
+                            @include span-columns(2,8);
+                            display: inline;
+                            &:nth-child(2) {
+                                @include pre(0);
+                                @include span-columns(2 omega,8);
+                                @include post(2,8);
+
+                                &>input {
+                                    background: grey;
+                                    border-color: grey;
+
+                                }
+                            }
+                            &>input {
+                                @include span-columns($total-columns);
+                                border:1px ridge #2ecc71;  
+                                background:#2ecc71;
+                                color:white;
+                                padding:2%;
+                                font-size: 15px;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }  
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

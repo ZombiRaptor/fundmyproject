@@ -1,0 +1,27 @@
+{%extends "main.html.twig"%}
+
+{% block mainhead %}
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/formulaireAjoutUser.css"> 
+{% endblock %}
+
+{% block mainsection %}
+<section id="page>"
+    <h1>Inscription</h1>
+    <h2>{{msg}}</h2>
+    <form method="post" action="{{app.urlFor('ajouterCompte')}}">
+        <label>Email*</label><input value="{{post.email}}" type="text" name="email" id="email"/><br/>
+        <label>Mot de passe*</label><input type="password" name="mdp" id="mdp"/><br/>
+        <label>Mot de passe*</label><input type="password" name="remdp" id="remdp"/><br/>
+        <label>Nom</label><input value="{{post.nom}}" type="text" name="nom" id="nom"/><br/>
+        <label>Prénom</label><input value="{{post.prenom}}" type="text" name="prenom" id="prenom"/><br/>
+        <label>Pays</label><input value="{{post.pays}}" type="text" name="pays" id="pays"/><br/>
+        <label>Adresse</label><input value="{{post.adresse}}" type="text" name="adresse" id="adresse"/><br/>
+        <label>Ville</label><input value="{{post.ville}}" type="text" name="ville" id="ville"/><br/>
+        <label>Code Postal</label><input value="{{post.cp}}" type="text" name="cp" id="cp"/><br/>
+        <label>Nom société</label><input value="{{post.nSoc}}" type="text" name="nSoc" id="nSoc"/><br/>
+        <label>Biographie</label><textarea  name="bio" id="bio">{{post.bio}}</textarea><br/>
+        <label>Téléphone</label><input value="{{post.tel}}" type="text" name="tel" id="tel"/><br/>
+        <input type="submit" value="Envoyer"/>  
+    </form>
+</section>
+{% endblock %}

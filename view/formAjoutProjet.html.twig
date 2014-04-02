@@ -1,0 +1,40 @@
+{%extends "main.html.twig"%}
+
+{% block mainhead %}
+<link rel="stylesheet" href="../css/formulaireAjoutProjet.css" />
+<link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block mainsection %}
+<section id="page">
+    <section>
+        <h1>Créez votre projet maintenant !</h1><br/>
+        <h2>{{msg}}</h2><br/>
+        <section>
+            <form method="post" action="{{app.urlFor('ajouterProjet')}}">
+                <article>
+                    <label>Choisissez un titre qui soit à la fois explicite et original représentant votre projet</label></br>
+                    <input placeholder="Titre de votre projet" value="{{post.titre}}" type="text" name="titre" id="titre" required/></br>
+                    <label>Choisissez la catégorie s'inscrivant le mieux à votre futur création</label></br>
+                    <select id="idcateg" name="idcateg" required></br>
+                        <option value="" disabled>Catégories</option>
+                {% for categorie in categories %}
+                        <option value="{{categorie.idcateg}}">{{categorie.libcateg}}</option>
+                {% endfor %}
+                    </select></br>
+                    <label>Inscrivez le montant nécessaire pour votre projet</label></br>
+                    <input placeholder="Montant (€)" value="{{post.but}}" type="number" name="but" id="but" pattern="^\d+$" required/></br>
+                    <label>Indiquez la durée pour atteindre votre objectif (90j. max)</label></br>
+                    <input placeholder="Durée (en jours)" value="{{post.echeance}}" type="number" name="echeance" min="10" max="90" id="echeance" pattern="^\d+$" required/></br>
+
+                </article>
+                <ul>
+                    <li><input type="submit" value="Envoyer"/></li>
+                    <li><input type="reset" value="Effacer"/></li>
+                </ul>
+            </form>
+        </section>
+    </section>
+</section>
+{% endblock %}

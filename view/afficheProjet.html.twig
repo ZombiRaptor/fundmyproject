@@ -1,0 +1,240 @@
+{%extends "main.html.twig"%}
+
+    {% block mainhead %}
+
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/fonts.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/tabbar.css">
+<script type="text/javascript" src="/www/moine7u/amtj-fmp/js/jquery-1.10.2.js" ></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript" >
+
+    $(document).ready(function() {
+        $('#buttonfinance').on('click', function() {
+            $('#finance').slideToggle(100);
+        });
+
+        $('#buttoncreator').on('click', function() {
+            $('#creator').slideToggle(100);
+        });
+
+        $('#buttonreward').on('click', function() {
+            $('#reward').slideToggle(100);
+        });
+
+        $('#buttonsoutien').on('click', function() {
+            if ($('#buttonsoutien').attr('disabled') !== 'disabled') {
+                $('#soutenir form').slideToggle("slow");
+            }
+        });
+
+        $('#tab-1 p img').attr('style', null);
+        $('#tab-1 p img').attr('width', null);
+        $('#tab-1 p img').attr('height', null);
+
+        $('#tab-1 p img').wrap("<div class='image'></div>");
+
+
+    });
+
+    $(function() {
+        $("#tabs").tabs();
+    });
+
+</script>
+{% endblock %}
+
+{% block mainsection %}
+<section id="page">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/fr_CA/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+{% if projet.utilisateur.idutilisateur == session.user.idutilisateur or session.user.droit == 1%}
+    <section id="actions">
+        <ul>
+            <li><a href="{{app.urlFor('supprimerProjet', {'id': projet.idprojet})}}">Supprimer le projet</a></li>
+            <li><a href="{{app.urlFor('afficherFormEditionDescription', {'id': projet.idprojet})}}">Éditer le projet</a></li>
+        </ul>
+    </section>
+{% endif %}
+    <section id="financescreator">
+        <section id='finances'>
+            <h1 id='buttonfinance'>Finances</h1>
+            <article id="finance"> 
+                <h3><img style='width:1.5em;' src='../logos/money38.png'/>   {{projet.argentrecu}} €</h3>
+                <h3><img style='width:1.5em;' src='../logos/money33.png'/>   {{projet.but}} €</h3>
+                <h3><img style='width:1.5em;' src='../logos/calendar68.png'/>    J-{{projet.restant}}</h3>
+                <h3><img style='width:1.5em;' src='../logos/group12.png'/>   {{bankers | length}} backers</h3>
+                <div id="progress">
+                    <strong>{{((projet.argentrecu / projet.but)*100) | round }}%</strong>
+                    <meter value="{{projet.argentrecu}}" max="{{projet.but}}"></meter>
+                </div>
+            </article>
+        </section>
+        <section id="infocreator">
+            <h1 id='buttoncreator'>Créateur</h1>
+            <article id="creator">
+                <h3><img style='width:1.5em;' src='../logos/adult.png'/> {{projet.utilisateur.nom}} {{projet.utilisateur.prenom}}</h3>
+                <h3><img style='width:1.5em;' src='../logos/house58.png'/>
+                {%if projet.utilisateur.adresse != null %}{{projet.utilisateur.adresse}}, {{projet.utilisateur.cp}}{% endif %} {{projet.utilisateur.ville}}{% if projet.utilisateur.pays != null %}, {{projet.utilisateur.pays}}{% endif %}</h3>
+                <h3><img style='width:1.5em;' src='../logos/money38.png'/>   Membre depuis le {{projet.utilisateur.datecreation}}</h3>
+            {% if projet.utilisateur.tel != null %}
+                <h3><img style='width:1.5em;' src='../logos/phone60.png'/>   {{projet.utilisateur.tel}}</h3>
+            {% endif %}
+                <h3><img style='width:1.5em;' src='../logos/plus6.png'/>   <a href="{{app.urlFor('afficherProfil', {'id': projet.utilisateur.idutilisateur})}}">Voir le profil</a></h3>
+            </article>
+        </section>
+    </section>
+    <section id="infoprojet">
+        <article id="projet">
+            <div id="author">
+                <a href="{{app.urlFor('afficherProfil', {'id': projet.utilisateur.idutilisateur})}}">
+                    <img src="..{{projet.utilisateur.photo}}"/>
+                </a>
+            </div>
+            <h1>{{projet.titre}}</h1>
+        {% if session.user.idutilisateur != null %}
+            {% if (suivi | length) == 0 %}
+            <a id="follow" href="{{app.urlFor('ajouterSuivi', {'idprojet': projet.idprojet})}}">Suivre ce projet <img src="/www/moine7u/amtj-fmp/logos/greystar.png"/></a>
+            {% else %}
+            <a id="follow" href="{{app.urlFor('supprimerSuivi', {'idprojet': projet.idprojet})}}"> Vous suivez ce projet <img src="/www/moine7u/amtj-fmp/logos/goldstar.png"/></a>
+            {% endif %}
+        {% endif %}
+            <h3><img style='width:1.5em;' src='../logos/label7.png'/> {{projet.categorie.libcateg}}</h3>       
+            <h3><img style='width:0.9em;' src='../logos/location2.png'/> {{projet.utilisateur.ville}}, {{projet.utilisateur.pays}}</h3>
+            </br>
+            <section id='video'><iframe frameborder='0' src="https://www.youtube.com/embed/{{projet.idvideo}}" width="620px" height="376px"></iframe></section>
+        </article>
+
+        <section id="soutenir">
+        {% if projet.restant > 0 %}
+            <h1 id='buttonsoutien'>Soutenir</h1>
+
+            <form method="POST" action="../paypal/BoutonPayer.php">
+                <div id='soutien'><label for='montant'>Montant : </label><input type="text" name="montant" id="montant"/></div>
+                <input type="hidden" name="titre_projet" value="{{projet.titre}}"/>
+                <input type="hidden" name="email_vendeur" value="{{projet.utilisateur.email}}" />
+                <input type="hidden" name="idprojet" value="{{projet.idprojet}}"/>
+                <input type="hidden" name="idutilisateur" value="{{session.user.idutilisateur}}"/>
+                <input type="submit" id='confirm' value="Confirmer"/>
+            </form>
+        {% else %}
+            <h1 disabled="disabled" style="background:grey;" id='buttonsoutien'>Soutenir</h1>
+        {% endif %}
+        {% if projet.pagefacebook != null %}
+            <div class="fb-like-box" data-href="{{projet.pagefacebook}}" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="true"></div>
+        {% endif %}
+        </section>
+
+
+        <section id="rewards">
+            <h1 id='buttonreward'>Récompenses</h1>
+            <section id="reward">
+            {% for recompense in projet.recompenses %}
+                <article>
+                    <h1>Pour {{recompense.butatteint}}€ et plus</h1>
+                    <h3><img style='width:2em;' src='../logos/medal5.png'/>{{recompense.descrec}}</h3>
+                {%if recompense.nbbackers == 1%}
+                    <h3><img style='width:2em;' src='../logos/group12.png'/>   {{recompense.nbbackers}} backer</h3>
+                {%else%}
+                    <h3><img style='width:2em;' src='../logos/group12.png'/>   {{recompense.nbbackers}} backers</h3>
+                {%endif%}
+
+                    <h3><img style='width:2em;' src='../logos/calendar68.png'/>    {{recompense.tpslivraison}} jours de livraison</h3>
+                {%if recompense.limite == 0%}
+                    <h3><img style="width:2em;" src="../logos/limit.png"/> quantité illimitée</h3>
+                {%else%}
+                    <h3><img style="width:2em;" src="../logos/limit.png"/> {{recompense.limite}} disponibles</h3>
+                {%endif%}
+                </article>     
+            {%endfor%}
+            </section>
+        </section>
+    </section>
+
+
+    <section id="infoprojet2">
+        <article id="infos">
+            <div id="tabs" >
+                <ul>
+                    <li><a href="#tab-1">Le Projet</a></li>
+                    <li><a href="#comments">Comments</a><div>{{projet.commentaires|length}}</div></li>
+                    <li><a href="#bankers">Backers</a><div>{{bankers|length}}</div></li>
+                </ul>
+
+                <div id="tab-1">
+                {{projet.descr | raw}}
+                </div>
+                <div id="comments">
+                   <!--<div class="fb-comments" data-href="http://localhost/amtj-fmp/projets/{{projet.idprojet}}" data-numposts="5" data-colorscheme="light"></div>-->
+                    <section>
+                        <div id='commentaires'>
+                {% for commentaire in commentaires %}
+                            <article>
+                                <div id="photocomment">
+                                    <a href="{{app.urlFor('afficherProfil', {'id': commentaire.utilisateur.idutilisateur})}}">
+                                        <img src="..{{commentaire.utilisateur.photo}}"/>
+                                    </a>
+                                </div>
+                                <h2 id="commentateur">{{commentaire.utilisateur.email}}</h2>
+                                <h3 id="comment">{{commentaire.commentaire}}</h3>
+                                {% if session.user is defined and session.user.droit == 1 %}
+                                <a href="{{app.urlFor('supprimerCommentaire', {'id': commentaire.idcommentaire})}}"><img src="/www/moine7u/amtj-fmp/logos/closered.png"/></a>
+                                {% endif %}
+                            </article>   
+                {% endfor %}
+                        </div>
+                        <article>
+                {% if (projet.commentaires|length) >5%}
+                 {% for i in 1..((projet.commentaires|length)/5+1) %}
+                            <a href="#" onclick="paginer({{projet.idprojet}},{{i}});">{{i}}</a>
+                 {% endfor %}
+                {% endif %}
+                        </article>     
+                    {% if session.user.idutilisateur is defined %}
+                        <form action="{{app.urlFor('ajouterCommentaire')}}" method="POST">
+                            <section>
+                                <textarea name="commentaire" placeholder="Ajouter un commentaire"></textarea>
+                                <input type="hidden" name="id_projet" value="{{projet.idprojet}}"/>
+                                <input id="submit" type="submit" value="Ajouter commentaire"/>
+                            </section>
+                        </form>
+                    {%else%}
+                        <h2><img style='width: 1em' src='/www/moine7u/amtj-fmp/logos/info5.png'/> Vous devez être connecté(e) pour poster des commentaires</h2>
+                    {% endif %}
+                    </section>
+                </div>
+                <div id="bankers">
+                {% if (bankers | length) > 0 %}
+                    <section>
+                    {% for banker in bankers %}
+                        <article>
+                            <div id='photobanker'>
+                                <a href="{{app.urlFor('afficherProfil', {'id': banker.idutilisateur})}}">
+                                    <img src="..{{banker.utilisateur.photo}}"/>
+                                </a>
+                            </div>
+                            <p>{{ banker.utilisateur.nom }} {{ banker.utilisateur.prenom}}</p>
+                            <p>{{banker.montant}} €</p>
+                        </article>
+
+                    {% endfor%}
+                    </section>
+                {% else %}
+                    <h2><img style='width: 1em' src='/www/moine7u/amtj-fmp/logos/info5.png'/> Aucun banker... Soyez le premier !</h2>   
+                {% endif %}
+                </div>
+
+            </div>
+        </article>
+    </section>
+</section>
+
+{% endblock %}

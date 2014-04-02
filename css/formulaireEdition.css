@@ -1,0 +1,596 @@
+/* line 17, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 16, ../sass/formulaireEdition.scss */
+body {
+  background-image: url("/www/moine7u/amtj-fmp/img/pattern1.png");
+  font-family: "Open Sans",arial,sans-serif;
+}
+
+/* line 20, ../sass/formulaireEdition.scss */
+body > #page {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *zoom: 1;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+body > #page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 23, ../sass/formulaireEdition.scss */
+body > #page > h1 {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  text-align: center;
+  font-size: 5em;
+  margin-top: 4%;
+  font-family: 'Give You Glory', cursive;
+}
+/* line 30, ../sass/formulaireEdition.scss */
+body > #page > section {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  background: white;
+  box-shadow: 3px 3px 5px 2px #7f8c8d;
+  margin: 2% 0;
+}
+/* line 35, ../sass/formulaireEdition.scss */
+body > #page > section > #listRecompenses {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 1%;
+}
+/* line 41, ../sass/formulaireEdition.scss */
+body > #page > section > #listRecompenses > article {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  font-size: 2.5em;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid #fff;
+  box-shadow: 0px 0px 0px 1px #DCDCDC;
+  margin-bottom: 1%;
+}
+/* line 51, ../sass/formulaireEdition.scss */
+body > #page > section > #listRecompenses > article > p {
+  width: 87.86408%;
+  float: left;
+  margin-right: 0.97087%;
+  display: inline;
+  color: #2D2D2D;
+  text-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 57, ../sass/formulaireEdition.scss */
+body > #page > section > #listRecompenses > article > p > strong {
+  font-weight: bold;
+}
+/* line 61, ../sass/formulaireEdition.scss */
+body > #page > section > #listRecompenses > article > a {
+  width: 12.13592%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  float: none;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 66, ../sass/formulaireEdition.scss */
+body > #page > section > #listRecompenses > article > a > img {
+  vertical-align: middle;
+}
+/* line 73, ../sass/formulaireEdition.scss */
+body > #page > section > form > article {
+  text-align: center;
+}
+/* line 75, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > div {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+}
+/* line 77, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > div > #imgprojet {
+  width: 250px;
+  height: 151px;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid #fff;
+  box-shadow: 0px 0px 0px 1px #DCDCDC;
+  overflow: hidden;
+}
+/* line 89, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > div > #imgprojet > img {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  height: 100%;
+}
+/* line 95, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > #labelvideo {
+  margin-top: 4%;
+}
+/* line 98, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > label {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  color: #2980b9;
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 2%;
+}
+/* line 104, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > label:first-child {
+  margin-top: 5%;
+}
+/* line 109, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > input, body > #page > section > form > article select, body > #page > section > form > article textarea, body > #page > section > form > article #cke_descr {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  padding: 1%;
+  font-size: 3em;
+  margin-bottom: 3%;
+  margin-top: 1%;
+  width: 96%;
+  margin-right: 2%;
+}
+/* line 119, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > #imageprojet {
+  margin-top: 2%;
+}
+/* line 122, ../sass/formulaireEdition.scss */
+body > #page > section > form > article > #cke_descr {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+}
+/* line 129, ../sass/formulaireEdition.scss */
+body > #page > section > form > ul {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  margin-top: 2%;
+}
+/* line 132, ../sass/formulaireEdition.scss */
+body > #page > section > form > ul > li {
+  width: 49.51456%;
+  float: left;
+  margin-right: 0.97087%;
+  display: inline;
+  display: inline;
+}
+/* line 137, ../sass/formulaireEdition.scss */
+body > #page > section > form > ul > li > input {
+  width: 100%;
+  float: left;
+  margin-right: 0.97087%;
+  display: inline;
+  border: 1px ridge #2ecc71;
+  background: #2ecc71;
+  color: white;
+  padding: 2%;
+  font-size: 2.7em;
+  width: 98%;
+  margin-left: 2%;
+}
+/* line 147, ../sass/formulaireEdition.scss */
+body > #page > section > form > ul > li > input:hover {
+  cursor: pointer;
+}
+/* line 151, ../sass/formulaireEdition.scss */
+body > #page > section > form > ul > li:nth-child(2) {
+  width: 49.51456%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+}
+/* line 153, ../sass/formulaireEdition.scss */
+body > #page > section > form > ul > li:nth-child(2) > input {
+  border: 1px ridge grey;
+  background: grey;
+  width: 98%;
+  margin-left: 0;
+  margin-right: 2%;
+}
+/* line 164, ../sass/formulaireEdition.scss */
+body > #page > section > ul {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+  margin: 2% 0;
+}
+/* line 168, ../sass/formulaireEdition.scss */
+body > #page > section > ul > li {
+  width: 49.51456%;
+  float: left;
+  margin-right: 0.97087%;
+  display: inline;
+  display: inline;
+}
+/* line 172, ../sass/formulaireEdition.scss */
+body > #page > section > ul > li > input {
+  width: 100%;
+  float: left;
+  margin-right: 0.97087%;
+  display: inline;
+  border: 1px ridge #2980b9;
+  background: #2980b9;
+  color: white;
+  padding: 2%;
+  font-size: 2.5em;
+  width: 98%;
+  margin-left: 2%;
+}
+/* line 182, ../sass/formulaireEdition.scss */
+body > #page > section > ul > li > input:hover {
+  cursor: pointer;
+}
+/* line 186, ../sass/formulaireEdition.scss */
+body > #page > section > ul > li:nth-child(2) {
+  width: 49.51456%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.2em;
+  display: inline;
+}
+/* line 188, ../sass/formulaireEdition.scss */
+body > #page > section > ul > li:nth-child(2) > input {
+  border: 1px ridge #2980b9;
+  background: #2980b9;
+  width: 98%;
+  margin-left: 0;
+  margin-right: 2%;
+}
+@media (min-width: 1024px) and (max-width: 1152px) {
+  /* line 201, ../sass/formulaireEdition.scss */
+  body > #page > h1 {
+    display: none;
+  }
+  /* line 204, ../sass/formulaireEdition.scss */
+  body > #page > section {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 207, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article {
+    margin-left: 25.12077%;
+    width: 49.75845%;
+    float: right;
+    margin-right: 0;
+    margin-right: 25.12077%;
+    text-align: center;
+  }
+  /* line 212, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > div {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 214, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > div > #imgprojet {
+    width: 374px;
+    height: 226px;
+  }
+  /* line 219, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > label {
+    font-size: 13px;
+  }
+  /* line 222, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > input, body > #page > section > form > article select, body > #page > section > form > article textarea, body > #page > section > form > article #cke_descr {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    padding: 1%;
+    font-size: 13px;
+  }
+  /* line 228, ../sass/formulaireEdition.scss */
+  body > #page > section > form ul {
+    margin-left: 25.12077%;
+    width: 49.75845%;
+    float: right;
+    margin-right: 0;
+    margin-right: 25.12077%;
+    margin-bottom: 2%;
+  }
+  /* line 233, ../sass/formulaireEdition.scss */
+  body > #page > section > form ul > li > input {
+    font-size: 14px;
+  }
+  /* line 239, ../sass/formulaireEdition.scss */
+  body > #page > section ul {
+    display: none;
+  }
+}
+@media (min-width: 1152px) and (max-width: 1854px) {
+  /* line 20, ../sass/formulaireEdition.scss */
+  body > #page {
+    margin-left: 8.36013%;
+    width: 83.27974%;
+    float: right;
+    margin-right: 0;
+    margin-right: 8.36013%;
+  }
+  /* line 249, ../sass/formulaireEdition.scss */
+  body > #page > section {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    background: white;
+    box-shadow: 3px 3px 5px 2px #7f8c8d;
+  }
+  /* line 253, ../sass/formulaireEdition.scss */
+  body > #page > section > h1 {
+    font-size: 50px;
+  }
+  /* line 257, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article {
+    margin-left: 25.12077%;
+    width: 49.75845%;
+    float: right;
+    margin-right: 0;
+    margin-right: 25.12077%;
+    margin-top: 1%;
+  }
+  /* line 263, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > div > #imgprojet {
+    width: 387px;
+    height: 234px;
+  }
+  /* line 268, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > label {
+    font-size: 13px;
+  }
+  /* line 271, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > select, body > #page > section > form > article input, body > #page > section > form > article textarea {
+    padding: 2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-size: 13px;
+  }
+  /* line 278, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    margin: 2% 0;
+  }
+  /* line 282, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li {
+    margin-left: 25.12077%;
+    width: 24.63768%;
+    float: left;
+    margin-right: 0.48309%;
+    display: inline;
+  }
+  /* line 286, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li:nth-child(2) {
+    margin-left: 0%;
+    width: 24.63768%;
+    float: right;
+    margin-right: 0;
+    margin-right: 25.12077%;
+  }
+  /* line 291, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li:nth-child(2) > input {
+    background: grey;
+    border-color: grey;
+  }
+  /* line 297, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li > input {
+    width: 100%;
+    float: left;
+    margin-right: 0.32154%;
+    border: 1px ridge #2ecc71;
+    background: #2ecc71;
+    color: white;
+    padding: 2%;
+    font-size: 14px;
+  }
+  /* line 304, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li > input:hover {
+    cursor: pointer;
+  }
+  /* line 311, ../sass/formulaireEdition.scss */
+  body > #page > section > ul {
+    display: none;
+  }
+}
+@media (min-width: 1855px) {
+  /* line 20, ../sass/formulaireEdition.scss */
+  body > #page {
+    margin-left: 25.06024%;
+    width: 49.87952%;
+    float: right;
+    margin-right: 0;
+    margin-right: 25.06024%;
+  }
+  /* line 320, ../sass/formulaireEdition.scss */
+  body > #page > section {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    background: white;
+    box-shadow: 3px 3px 5px 2px #7f8c8d;
+  }
+  /* line 325, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article {
+    margin-left: 25.12077%;
+    width: 49.75845%;
+    float: right;
+    margin-right: 0;
+    margin-right: 25.12077%;
+    margin-top: 1%;
+  }
+  /* line 331, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > div > #imgprojet {
+    width: 387px;
+    height: 234px;
+  }
+  /* line 336, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > label {
+    font-size: 13px;
+  }
+  /* line 339, ../sass/formulaireEdition.scss */
+  body > #page > section > form > article > select, body > #page > section > form > article input, body > #page > section > form > article textarea {
+    padding: 2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-size: 13px;
+  }
+  /* line 346, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    margin: 2% 0;
+  }
+  /* line 350, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li {
+    margin-left: 25.12077%;
+    width: 24.63768%;
+    float: left;
+    margin-right: 0.48309%;
+    display: inline;
+  }
+  /* line 354, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li:nth-child(2) {
+    margin-left: 0%;
+    width: 24.63768%;
+    float: right;
+    margin-right: 0;
+    margin-right: 25.12077%;
+  }
+  /* line 359, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li:nth-child(2) > input {
+    background: grey;
+    border-color: grey;
+  }
+  /* line 365, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li > input {
+    width: 100%;
+    float: left;
+    margin-right: 0.24096%;
+    border: 1px ridge #2ecc71;
+    background: #2ecc71;
+    color: white;
+    padding: 2%;
+    font-size: 14px;
+  }
+  /* line 372, ../sass/formulaireEdition.scss */
+  body > #page > section > form > ul > li > input:hover {
+    cursor: pointer;
+  }
+  /* line 379, ../sass/formulaireEdition.scss */
+  body > #page > section > ul {
+    display: none;
+  }
+}

@@ -1,0 +1,84 @@
+{%extends "main.html.twig"%}
+
+{% block mainhead %}
+<link rel="stylesheet" href="../css/list.css">
+<script src="../js/jquery-1.10.2.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="../js/jquery.pajinate.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#list ul li a article #photo').hover(function() {
+            $(this).children('span').css('display', "block");
+        }, function() {
+            $(this).children('span').css('display', "none");
+        });
+
+        $('#list').pajinate({
+            num_page_links_to_display: 3,
+            items_per_page: 1
+        });
+    });
+
+</script>
+{% endblock %}
+
+{% block mainsection %}
+<section id="page">
+{% if (categories |length) >0%}
+
+    <section id="categories">
+        <h2>Catégories</h2>
+        <ul>
+        {% for categorie in categories %}
+        {% if (categorie.libcateg == categselect.libcateg) %}
+            <li class='selected'><a href="{{app.urlFor('afficherProjetsCategorie', {'id': categorie.idcateg})}}">{{categorie.libcateg}}</a></li>
+        {% else %}
+            <li><a href="{{app.urlFor('afficherProjetsCategorie', {'id': categorie.idcateg})}}">{{categorie.libcateg}}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+    </section>
+{% endif %}
+
+    <section>
+        <h2>{{titre}}</h2>
+    {% if (projets | length) == 0 %}
+        <h2 id="null"><img style='width: 15px' src='../logos/info5.png'/> Aucun projet... </h2>
+    {% else %}
+        <div id='list' class='container'>
+            <ul class='content'>
+        {% for key, page in projets%}
+                <li id='page{{key+1}}'>
+            {% for projet in page %}
+                    <a href='{{app.urlFor('afficherProjet', {'id': projet.idprojet})}}'>
+                        <article>
+                            <div id="photo">
+                                <img src='..{{projet.medias[0].url}}'/>
+                                <span style="display : none;">{{projet.resume}}</span>
+                            </div>
+                            <div>
+                                <h1 id="titre">{{projet.titre }}</h1>
+                                <h3 id="but">Objectif : {{projet.but}} €</h3>
+                                <h3 id="recu">Recolté : {{projet.argentrecu}} €</h3>
+                                <h3 id="tps">J-{{projet.restant}}</h3>
+                            </div>
+                            <div id="amount">
+                                <strong>{{((projet.argentrecu / projet.but)*100)| round}}%</strong>
+                                <meter value="{{projet.argentrecu}}" max="{{projet.but}}"></meter>
+                            </div>
+                        </article>
+                    </a>
+            {% endfor %}
+                </li>
+        {% endfor %}
+            </ul>
+            <div class="page_navigation"></div>
+        </div>
+    {% endif %}
+    </section>
+</section>
+{% if (categories | length) == 0 %}
+    {%include 'menuListe.html.twig'%}
+{% endif %}
+{%include 'social.html.twig'%}
+{% endblock %}

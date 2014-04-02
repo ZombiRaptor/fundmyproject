@@ -1,0 +1,85 @@
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<link rel="stylesheet" type="text/css" href="../css/style3.css" />
+<link rel='stylesheet' type='text/css' href='../css/menuListe.css' />
+<script>
+    $(document).ready(function() {
+            $('#toggle').hover(function() {
+
+                $('#toggle ul').animate({
+                    left: "+=310px"
+                });
+            }, function() {
+                $('#toggle ul').animate({
+                    left: "-=310px"
+                });
+            });
+       
+
+        $('#opt').click(function() {
+            $("#menu ul").slideToggle('fast');
+        })
+
+    });
+
+</script>
+
+<div class="content" id="toggle"> 
+    <ul class="ca-menu">
+        <li class="ca-tab">
+            <a href="{{app.urlFor('projetsTermines')}}">
+                <span class="ca-icon">F</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Les Finis</h2>
+                    <h3 class="ca-sub">Finished Projects</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="{{app.urlFor('projetsReussis')}}">
+                <span class="ca-icon">R</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Les Réussis</h2>
+                    <h3 class="ca-sub">Successful projects</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="{{app.urlFor('presqueFinis')}}">
+                <span class="ca-icon">PF</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Les Presque Finis</h2>
+                    <h3 class="ca-sub">Almost Finished</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="{{app.urlFor('petitsProjets')}}">
+                <span class="ca-icon">P</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Les Petits</h2>
+                    <h3 class="ca-sub">Little Projects</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="{{app.urlFor('grosProjets')}}">
+                <span class="ca-icon">G</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Les Gros</h2>
+                    <h3 class="ca-sub">Bigger Projects</h3>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id='menu'>
+    <h2 id='opt'>+ d'Options</h2>
+    <ul id="ulmenu" style='display:none;'>
+        <li><a href="{{app.urlFor('projetsTermines')}}">Les Finis</a></li>
+        <li><a href="{{app.urlFor('projetsReussis')}}">Les Réussis</a></li>
+        <li><a href="{{app.urlFor('presqueFinis')}}">Les Presque Finis</a></li>
+        <li><a href="{{app.urlFor('petitsProjets')}}">Les Petits</a></li>
+        <li><a href="{{app.urlFor('grosProjets')}}">Les Gros</a></li>
+    </ul>
+</div>

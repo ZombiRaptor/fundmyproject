@@ -1,0 +1,72 @@
+{%extends "main.html.twig"%}
+
+{% block mainhead %}
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/modifuser.css" />
+<link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js" ></script>
+<script>
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#profil').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $(document).ready(function() {
+        $("#changephoto").change(function() {
+            readURL(this);
+        });
+    });
+</script>
+{% endblock %}
+
+{% block mainsection %} 
+<section id="page">
+    <article>
+        <h1>Modification du profil</h1>
+        <h2>{{msg}}</h2>
+        <form method="post" action="{{app.urlFor('modifierCompte')}}" enctype="multipart/form-data">
+            <section id="photo">
+                <div>
+                {% if session.user.photo != null %}
+
+                    <img id="profil" src="..{{session.user.photo}}"/>
+                {% else %}
+                    <img id="profil" src="../img/profildef.png"/>
+                {% endif %}
+                </div>
+                <input type="file" id="changephoto" name='changephoto'/>
+                <p>Dimensions recommandées : 400x400.</p>
+            </section>
+            <section id="infos">
+                <label>Nom</label><input value="{{session.user.nom}}" type="text" name="nom" id="nom"/><br/>
+                <label>Prénom</label><input value="{{session.user.prenom}}" type="text" name="prenom" id="prenom"/><br/>
+                <label>Pays</label><input value="{{session.user.pays}}" type="text" name="pays" id="pays"/><br/>
+                <label>Adresse</label><input value="{{session.user.adresse}}" type="text" name="adresse" id="adresse"/><br/>
+                <label>Ville</label><input value="{{session.user.ville}}" type="text" name="ville" id="ville"/><br/>
+                <label>Code Postal</label><input value="{{session.user.cp}}" type="text" name="cp" id="cp"/><br/>
+                <label>Nom société</label><input value="{{session.user.nomsociete}}" type="text" name="nSoc" id="nSoc"/><br/>
+                <label>Téléphone</label><input value="{{session.user.tel}}" type="text" name="tel" id="tel"/><br/>
+            </section>
+            <section id="biographie">
+                <label>Biographie</label><textarea  name="bio" id="bio">{{session.user.biographie}}</textarea><br/>
+            </section>
+            <section id="sites">
+                <label>Site Web</label><input value="{{session.user.siteweb}}" type="text" name="site" id="site"/><br/>
+                <label>Facebook</label><input value="{{session.user.fb}}" type="text" name="fb" id="fb"/><br/>
+            </section>
+            <div id="enreg">
+                <input type="submit" value="Enregistrer les Modifications"/>
+            </div>
+
+
+        </form>    
+    </article>
+</section>
+{% endblock %}

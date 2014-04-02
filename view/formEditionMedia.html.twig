@@ -1,0 +1,53 @@
+{%extends "main.html.twig"%}
+{% block mainhead %}
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/formulaireEdition.css" />
+<link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
+
+<script>
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#imagep').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $(document).ready(function() {
+        $("#imageprojet").change(function() {
+            readURL(this);
+        });
+    });
+</script>
+{% endblock %}
+{% block mainsection %}
+<section id="page">
+{% include 'listeEtapes.html.twig' %}
+    <h1>Récompenses</h1>
+    <section>
+
+        <form method="post" action="{{app.urlFor('editionMedia', {'id': projet.idprojet})}}" enctype="multipart/form-data">
+            <article>
+                <label id="labelimg" for="imageprojet">Image du projet<br/>Dimensions recommandées : 620 x 375</label>
+                <div><div id="imgprojet"><img id="imagep" name="imagep" src="/www/moine7u/amtj-fmp{{image.url}}" /></div></div>
+                <input type="file" src="{{image.url}}" name="imageprojet" id="imageprojet" required/>
+
+                <label id="labelvideo" for="videoprojet">Vidéo du projet (lien Youtube)</label>
+                <input type="text" value="{{video.url}}" name="videoprojet" id="videoprojet" required/>
+
+            </article>
+            <ul>
+                <li><input type="submit" value="Envoyer"/></li>
+                <li><input type="reset" value="Effacer"/></li>
+            </ul>
+        </form>
+        <ul>
+            <li><input type="button" name="precedent" value="Precedent" onclick="self.location.href = '/www/moine7u/amtj-fmp/projet/{{projet.idprojet}}/description'" /></li>
+            <li><input type="button" name="suivant" value="Suivant" onclick="self.location.href = '/www/moine7u/amtj-fmp/projet/{{projet.idprojet}}/recompenses'" /></li>  
+        </ul>
+    </section>
+</section>
+{% endblock %}

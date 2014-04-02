@@ -1,0 +1,127 @@
+@import "susy";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;
+$gutter-width: 0.5em;
+$grid-padding: 0.2em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12;
+
+body{ 
+    #social{
+        @include span-columns($total-columns omega);
+        display:block;
+        box-shadow: 3px 3px 5px 2px #7f8c8d;
+        &>li{
+            width:25%;
+            display:inline;
+            float:left;
+            padding:0;
+            margin:0;
+            height:100px;    
+            &>a>img{
+                width:5em;
+            }
+        }
+
+        &>#fb{
+            background:#3b5998;
+            &>a>img{
+                padding-left: 43%;
+                padding-top: 8%;
+                width:2.5em;
+            }
+            &:hover{
+                background:#8b9dc3;
+            }
+        }
+        &>#twitter{
+            background:#4099FF;
+            &>a>img{
+                padding-left: 35%;
+                padding-top: 8%;
+            }
+            &:hover{
+                background:#9ae4e8;
+            }
+        }
+        &>#google{
+            background : #D34836;
+            &>a>img{
+                padding-left: 35%;
+                padding-top: 9%;
+            }
+            &:hover{
+                background:#2D2D2D;
+            }
+        }
+        &>#rss{
+            background : #FF6600;
+            &>a>img{
+                padding-left: 39%;
+                padding-top: 9%;
+            }
+            &:hover{
+                background:black;
+            }
+        }
+    }
+
+    @include at-breakpoint($break1){
+        #social{
+            @include span-columns(4, 8);
+            &>li{
+                height:43px;
+                &>a>img{
+                    width:25px;
+                }
+            }
+            &>#fb>a>img{
+                width:12px;
+            }
+        }
+    }
+
+    @include at-breakpoint($break2){
+        #social{
+            width:50px;
+            position:fixed;
+            top:50%;
+            right:2%;
+            &>li{
+                height:50px;
+                width:50px;
+                display:block;
+                float:none;
+                &>a>img{
+                    width:25px;
+                }
+            }
+            &>#fb>a>img{
+                padding-left: 38%;
+                padding-top: 26%;
+                width:12px;
+            }
+
+            &>#twitter>a>img{
+                padding-left: 29%;
+                padding-top: 25%;
+            }
+
+            &>#google>a>img{
+                padding-left: 29%;
+                padding-top: 25%;
+            }
+
+            &>#rss>a>img{
+                padding-left: 33%;
+                padding-top: 28%;
+            }
+
+        }
+    }
+}

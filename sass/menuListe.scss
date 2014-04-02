@@ -1,0 +1,57 @@
+@import "susy";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;
+$gutter-width: 0.5em;
+$grid-padding: 0.2em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12;
+
+body{
+    @include box-sizing(border-box);
+    @include container($total-columns,$break1,$break2);
+    #toggle{
+        display:none;
+    }
+
+    #menu{
+        @include span-columns($total-columns omega);
+        background:#2D2D2D;
+        display:block;
+        &>h2, ul>li{
+            @include span-columns($total-columns omega);
+            color:white;
+            text-align:center;
+            padding:3% 0;
+            font-size:2.5em;
+        }
+        &>ul{
+            position:relative;
+            &>li:hover{
+                background: #c0392b;
+                color:white;
+            }
+        }
+    }
+
+
+    @include at-breakpoint($break1){
+        #menu{
+            @include span-columns(4 omega, 8);
+            &>h2, ul>li{
+                @include span-columns($total-columns omega);
+                font-size:14px;
+            }
+        }
+    }
+    @include at-breakpoint($break2){
+        #toggle{
+            display:block;
+        }
+    }
+}
+

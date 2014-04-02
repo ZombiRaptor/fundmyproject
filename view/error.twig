@@ -1,0 +1,15 @@
+{%extends "main.html.twig"%}
+
+{% block mainhead %}
+<link rel='stylesheet' href='/www/moine7u/amtj-fmp/css/error.css'/>
+<link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'/>
+{% endblock %}
+
+{% block mainsection %}
+<section id="page">
+    <section>
+        <h1>{{msg}}</h1>
+        <a href="{{app.urlFor('afficherPageAccueil')}}">Retour à la page d'accueil</a>
+    </section>
+</section>
+{% endblock %}

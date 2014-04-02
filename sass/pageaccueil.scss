@@ -1,0 +1,696 @@
+@import "susy";
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;
+$gutter-width: 0.5em;
+$grid-padding: 0.2em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12 1854px;
+$break3:1855px 16;
+
+body{
+    background-image: url(../img/pattern1.png);
+    font-family: "Open Sans",arial,sans-serif;
+}
+body>#page{
+    @include box-sizing(border-box);
+    @include container($total-columns,$break1,$break2, $break3);
+
+    #banniere{
+        @include span-columns($total-columns omega);
+        background: #3498db;
+        color: white;
+        height:100px;
+        position:relative;
+        box-shadow: 3px 3px 5px 2px #7f8c8d;
+        &>img{
+            position:absolute;
+            top:0;
+            right:0;
+            &:hover{
+                cursor :pointer;
+            }
+        }
+        &>h1{
+            font-size:3em;
+            font-family: 'Give You Glory', cursive;
+            text-align: center;
+            padding-top: 3%;
+        }
+    }
+    a{
+        text-decoration:none;
+    }
+    .bx-wrapper>img{
+        width:100%;
+    }
+    .bxslider>li>a{
+        position:relative;
+        text-decoration:none;
+    }    
+    .bxslider>li>ul.bandeau{
+        background: black;
+        opacity: 0.5;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        padding:2%;
+        display: block;
+
+        &>li{
+            @include span-columns(3, 12);
+            display:inline;
+            float:left;
+            color: rgba(255, 255, 255, 1);
+            text-align:center;
+            &:last-child{
+                @include span-columns(3 omega, 12);
+            }
+        }
+    }
+    &>#list{
+        @include span-columns($total-columns omega);
+        &>section{
+            background:white;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+            margin-bottom: 1%;
+            margin-top:2%;
+            &>h2{
+                padding:1%;
+                margin-bottom: 2%;
+            }
+        }
+        &>#main>#categories{
+            @include span-columns($total-columns omega);
+            box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            padding:1%;
+            background:white;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+            &>h2{
+                font-size:2.5em;
+                padding-top:2%;
+                padding-left:2%;
+            }
+            &>ul{
+                padding:2%;
+                &>li{
+                    @include span-columns(2, 4);
+                    font-size:2.5em;
+                    padding-top:1%;
+                    padding-bottom:1%;
+                    &:nth-child(2n){
+                        @include span-columns(2 omega, 4);
+                    }
+                    &>a{
+                        padding-left:3%;
+                        color:black;
+
+                    }
+                    &:hover{
+                        background: #c0392b;
+                        &>a{
+                            color:white;
+                        }
+                    }
+                }
+            }
+            &>a{
+                &>button{
+                    @include span-columns($total-columns omega);
+                    border:1px ridge #3498db;
+                    background: #3498db;
+                    margin-top:3%;
+                    margin-bottom:1%;
+                    padding:4%;
+                    font-size:2.5em;
+                    border-radius:1px;
+                    color:white;
+                }
+            }
+        }
+        &>#main>#flprojets{
+            &>.bx-slider{
+                @include span-columns($total-columns omega);
+            }
+            &>h2{
+                font-size:2.5em;
+                padding-top:3%;
+                padding-left:3%;
+                margin-bottom:2%;
+            }
+        }
+        &>#projetsprox, #projetspop, #mentors{
+            @include span-columns($total-columns omega);
+            .bx-wrapper{
+                @include span-columns($total-columns omega);    
+                &>.bx-viewport{
+                    box-shadow:none;
+                }
+            }
+            &>#null{
+                text-align:center;
+                &>img{
+                    vertical-align: middle;
+                }
+            }
+            &>h2{
+                font-size:2.5em;
+                padding-top:2%;
+                padding-left:3%;
+                margin-bottom: 2%;
+                &>a{
+                    @include span-columns(1 omega, 4);
+                    background: #c0392b;
+                    color:white;
+                    font-size:0.8em;
+                    padding:1%;
+                    text-align:center;
+                }
+            }
+            #prox, #pop, #ment{
+                &>li{
+                    @include span-columns($total-columns omega);
+                    padding:0.5%;
+                    &>a{
+                        color:black;
+                        &>article{
+                            @include span-columns($total-columns omega);
+                            box-sizing:border-box;
+                            -moz-box-sizing:border-box;
+                            -webkit-box-sizing:border-box;
+                            border:4px solid #fff;
+                            box-shadow: 0px 0px 0px 1px #DCDCDC;
+                            background:white;
+                            font-size:2.5em;
+                            margin-bottom:7px;
+                            &>#photo{
+                                position:relative;
+                                &>#desc{
+                                    position:absolute;
+                                    background:black;
+                                    opacity:0.7;
+                                    top:0;
+                                    color:white;
+                                    width:100%;
+                                    height:100%;
+                                }
+                                &>img{
+                                    @include span-columns(1, 4);
+                                }
+                            }
+                            &>div:nth-child(2){
+                                @include span-columns(3 omega); 
+                                &>#titre{
+                                    font-weight: bold;
+                                    margin-left:5%;
+                                    &:first-letter{
+                                        text-transform: uppercase;
+                                    }
+                                }
+                                &>#but,#recu, #tps{
+                                    padding-left:5%;
+                                    color:#7f8c8d;
+                                    font-size:0.8em;
+                                }
+                                &>#recu{
+                                    @include span-columns(2, 3);
+                                }
+                                &>#tps{
+                                    @include span-columns(1 omega, 3);
+                                    text-align:right;
+                                }
+                            }
+                            &>#amount{
+                                @include span-columns($total-columns omega);
+                                margin-top:3%;
+                                &>strong{
+                                    @include span-columns(1, 4);
+                                    font-weight:bold;
+                                    text-align:center;
+                                }
+                                &>meter{
+                                    @include span-columns(3 omega, 4);
+                                }
+                            }
+                        }   
+                    }
+                }                 
+            }
+            #ment>li>a>article{
+                @include span-columns(2, 4);
+                margin:0;
+                &>#photo>img{
+                    @include span-columns($total-columns omega);
+                }
+                &:nth-child(2n){
+                    @include span-columns(2 omega, 4);
+                }
+            }
+        }
+    }
+
+
+    @include at-breakpoint($break1){
+        #banniere>h1{
+            font-family: 'Give You Glory', cursive;
+            font-size:30px;
+        }
+        .bxslider>li>ul.bandeau>li{
+            font-size:13px;
+        }
+        #list{
+            @include span-columns($total-columns omega);
+
+            &>section{
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                margin-bottom: 2%;
+                margin-top:2%;
+            }
+            &>#main{
+                @include span-columns($total-columns omega);
+                &>#flprojets{
+                    @include span-columns(6, $total-columns);
+                    &>.bx-wrapper{
+                        width:620px;
+                    }
+
+                    &>h2{
+                        font-size:14px;
+                        margin-bottom: 2%;
+                    }
+                    &>.bx-wrapper{
+                        margin-left:2%;
+                    }
+                }
+                &>#categories{
+                    @include span-columns(2 omega, $total-columns);
+                    box-shadow:none;
+                    &>h2{
+                        font-size:14px;
+                        margin-bottom: 2%;
+                        margin-top:4%;
+                    }
+                    &>ul{
+                        margin-top:6%;
+                        &>li{
+                            @include span-columns($total-columns omega);
+                            padding:2%;
+                            font-size:14px;
+                            &:nth-child(2n){
+                                @include span-columns($total-columns omega);
+                            }
+                        }
+                    }
+                    &>a>button{
+                        padding: 8%;
+                        font-size:15px;
+                    }
+                }
+            }
+            &>#projetsprox, #projetspop, #mentors{
+                @include span-columns($total-columns omega);
+                &>h2{
+                    @include span-columns($total-columns omega);
+                    font-size:14px;
+                    margin-top:0;
+                    margin-bottom:0;
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    &>p{
+                        @include span-columns(10, 12);
+                    }
+                    &>a{
+                        @include span-columns(1.5 omega, 12);
+                        background: #c0392b;
+                        font-size: 12px;
+                        text-shadow: none;
+                        color:white;
+                        padding: 1%;
+                        margin-top:-1%;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+                .bx-wrapper{
+                    @include span-columns($total-columns omega);    
+                    &>.bx-viewport{
+                        box-shadow:none;
+                    }
+                }
+
+                #prox, #pop, #ment{
+                    &>li{
+                        @include span-columns($total-columns omega);
+                        &>a{
+                            &>article{
+                                @include span-columns(3, 12);
+                                box-sizing:border-box;
+                                -moz-box-sizing:border-box;
+                                -webkit-box-sizing:border-box;
+                                border:4px solid #fff;
+                                box-shadow: 0px 0px 0px 1px #DCDCDC;
+                                font-size:13px;
+                                &>#photo{                                    
+                                    &>img{
+                                        @include span-columns($total-columns);
+                                    }
+                                }
+                                &>div:nth-child(2){
+                                    @include span-columns($total-columns);
+                                    &>#titre{
+                                        margin-top:5%;
+                                        padding-left:5%;
+                                    }
+                                    &>#titre,#but,#recu, #tps{
+                                        margin-left:0;
+                                    }
+                                }
+                            }    
+                            &:nth-child(4n){
+                                &>article{
+                                    @include span-columns(3 omega, 12);
+                                }
+
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+    }
+
+    @include at-breakpoint($break2){
+        #banniere>h1{
+            font-family: 'Give You Glory', cursive;
+            font-size:30px;
+        }
+        .bxslider>li>ul.bandeau{
+            display:none;
+            &>li{
+                font-size:15px;
+            }
+        }
+
+        #list{
+            @include pre(1, 12);
+            @include span-columns(10, 12);
+            @include post(1, 12);
+
+            &>section{
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                margin-bottom: 2%;
+                margin-top:2%;
+
+            }
+            &>#main{
+                @include span-columns($total-columns omega);
+                &>#flprojets{
+                    @include span-columns(8, 12);
+                    background:white;
+                    &>h2{
+                        font-size:14px;
+                        padding-top:3%;
+                        padding-left:3%;
+                        margin-bottom:2%;
+                    }
+                    &>.bx-wrapper{
+                        width:620px;
+                        margin-left:6%;
+                    }
+                }
+                &>#categories{
+                    @include span-columns(3.5 omega, 12);
+                    box-shadow:none;
+                    &>h2{
+                        font-size:14px;
+                        margin-top:3%;
+                    }
+                    &>ul>li{
+                        @include span-columns($total-columns omega);
+                        padding:2%;
+                        font-size:13px;
+                        &>a{
+                            padding-left:2%;
+                        }
+                        &:nth-child(2n){
+                            @include span-columns($total-columns omega);
+                        }
+                    }
+                    &>a>button{
+                        padding:6%;
+                        font-size:15px;
+                        &:hover{
+                            cursor:pointer;
+
+                        }
+                        &>a{
+                            font-size:17px;
+                            width:100%;
+                        }
+                    }
+                }
+            }
+
+            &>#projetsprox, #projetspop, #mentors{
+                @include span-columns($total-columns omega);
+
+                &>h2{
+                    font-size:14px;
+                    margin-top:0;
+                    &>p{
+                        @include span-columns(10, 12);
+                    }
+                    &>a{
+                        @include span-columns(1.5 omega, 12);
+                        background: #c0392b;
+                        font-size: 12px;
+                        text-shadow: none;
+                        color:white;
+                        padding: 1%;
+                        margin-top:-1%;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+                .bx-wrapper{
+                    @include span-columns($total-columns omega);    
+                    &>.bx-viewport{
+                        box-shadow:none;
+                    }
+                }
+
+                #prox, #pop, #ment{
+                    &>li{
+                        @include span-columns($total-columns omega);
+                        &>a{
+                            &>article{
+                                @include span-columns(3, 12);
+                                box-sizing:border-box;
+                                -moz-box-sizing:border-box;
+                                -webkit-box-sizing:border-box;
+                                border:4px solid #fff;
+                                box-shadow: 0px 0px 0px 1px #DCDCDC;
+                                font-size:13px;
+                                &>#photo{                                    
+                                    &>img{
+                                        @include span-columns($total-columns);
+                                    }
+                                }
+                                &>div:nth-child(2){
+                                    @include span-columns($total-columns);
+                                    &>#titre{
+                                        margin-top:5%;
+                                        padding-left:5%;
+                                    }
+                                    &>#titre,#but,#recu, #tps{
+                                        margin-left:0;
+                                    }
+                                }
+                            }    
+                            &:nth-child(4n){
+                                &>article{
+                                    @include span-columns(3 omega, 12);
+                                }
+
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+    }
+
+    @include at-breakpoint($break3){
+        #banniere>h1{
+            font-family: 'Give You Glory', cursive;
+            font-size:30px;
+        }
+        .bxslider>li>ul.bandeau{
+            display:none;
+            &>li{
+                font-size:15px;
+            }
+        }
+        #banniere{
+            @include span-columns($total-columns omega);
+            background: #3498db;
+            color: white;
+            height:100px;
+            position:relative;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+            &>img{
+                position:absolute;
+                top:0;
+                right:0;
+                &:hover{
+                    cursor :pointer;
+                }
+            }
+            &>h1{
+                font-size:30px;
+                text-align: center;
+                padding-top: 3%;
+            }
+        }
+        #list{
+            @include pre(4, 16);
+            @include span-columns(8, 16);
+            @include post(4, 16);
+
+            &>section{
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                margin-bottom: 2%;
+                margin-top:2%;
+
+            }
+            &>#main{
+                @include span-columns($total-columns omega);
+                &>#flprojets{
+                    @include span-columns(8, 12);
+                    background:white;
+                    &>h2{
+                        font-size:17px;
+                        padding-top:3%;
+                        padding-left:3%;
+                        margin-bottom:2%;
+                    }
+                    &>.bx-wrapper{
+                        width:620px;
+                        margin-left:4%;
+                    }
+                }
+                &>#categories{
+                    @include span-columns(3.5 omega, 12);
+                    box-shadow:none;
+                    &>h2{
+                        font-size:17px;
+                        margin-top:3%;
+                    }
+                    &>ul>li{
+                        @include span-columns($total-columns omega);
+                        padding:2%;
+                        font-size:13px;
+                        &>a{
+                            padding-left:2%;
+                        }
+                        &:nth-child(2n){
+                            @include span-columns($total-columns omega);
+                        }
+                    }
+                    &>a>button{
+                        padding:6%;
+                        font-size:15px;
+                        &:hover{
+                            cursor:pointer;
+
+                        }
+                        &>a{
+                            font-size:17px;
+                            width:100%;
+                        }
+                    }
+                }
+            }
+
+            &>#projetsprox, #projetspop, #mentors{
+                @include span-columns($total-columns omega);
+
+                &>h2{
+                    font-size:17px;
+                    margin-top:0;
+                    &>p{
+                        @include span-columns(10, 12);
+                    }
+                    &>a{
+                        @include span-columns(1.5 omega, 12);
+                        background: #c0392b;
+                        font-size: 12px;
+                        text-shadow: none;
+                        color:white;
+                        padding: 1%;
+                        margin-top:-1%;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+                .bx-wrapper{
+                    @include span-columns($total-columns omega);    
+                    &>.bx-viewport{
+                        box-shadow:none;
+                    }
+                }
+
+                #prox, #pop, #ment{
+                    &>li{
+                        @include span-columns($total-columns omega);
+                        &>a{
+                            &>article{
+                                @include span-columns(3, 12);
+                                box-sizing:border-box;
+                                -moz-box-sizing:border-box;
+                                -webkit-box-sizing:border-box;
+                                border:4px solid #fff;
+                                box-shadow: 0px 0px 0px 1px #DCDCDC;
+                                font-size:13px;
+                                &>#photo{                                    
+                                    &>img{
+                                        @include span-columns($total-columns);
+                                    }
+                                }
+                                &>div:nth-child(2){
+                                    @include span-columns($total-columns);
+                                    &>#titre{
+                                        margin-top:5%;
+                                        padding-left:5%;
+                                    }
+                                    &>#titre,#but,#recu, #tps{
+                                        margin-left:0;
+                                    }
+                                }
+                            }    
+                            &:nth-child(4n){
+                                &>article{
+                                    @include span-columns(3 omega, 12);
+                                }
+
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+    }
+}
+
+

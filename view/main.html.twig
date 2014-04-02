@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="/www/moine7u/amtj-fmp/js/jquery-1.10.2.js" ></script>
+        <link href="/www/moine7u/amtj-fmp/css/main.css" rel="stylesheet" type="text/css" ></link>
+        <link href="/www/moine7u/amtj-fmp/css/fonts.css" rel="stylesheet" type="text/css" ></link>
+        <script type="text/javascript">
+            function afficheCacheMenu() {
+                if ($('.menu div').is(":visible")) {
+                    $('.menu div').slideUp(100);
+                } else {
+                    $('.menu div').slideDown(100);
+                }
+            }
+
+
+            function affichecacheActions() {
+                if ($('#acts').is(":visible")) {
+                    $('#acts').slideUp(100);
+                    document.getElementById("display").src = "/www/moine7u/amtj-fmp/logos/down.png";
+                } else {
+                    $('#acts').slideDown(100);
+                    document.getElementById("display").src = "/www/moine7u/amtj-fmp/logos/up.png";
+                }
+            }
+            function paginer(id, page) {
+
+                $.getJSON("http://localhost/amtj-fmp/paginationCommentaires/" + id + "/" + page + "", function(data) {
+                    var interhtml = "<div id='commentaires'>";
+                    for (var i = 0; i < data.length; i++) {
+                        (function(count) {
+                            interhtml += "<article>";
+                            interhtml += "<div id='photocomment'><a href='http://localhost/amtj-fmp/utilisateurs/" + data[count]['utilisateur']['idutilisateur'] + "'><img src='/amtj-fmp" + data[count]['utilisateur']['photo'] + "'/></a></div>";
+                            interhtml += "<h2>" + data[count]['utilisateur']['email'] + "</h2>" + data[count]['commentaire'] + "</article>";
+                        })(i);
+                    }
+                    interhtml += "</div>";
+                    $("#commentaires").replaceWith(interhtml);
+
+                });
+            }
+        </script>
+        {% block mainhead %}
+
+        {% endblock %}
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=397857523692101";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=397857523692101";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        <header id='banner'>
+            <div><a href="{{app.urlFor('afficherPageAccueil')}}">FundMyProject</a><h2 id="mobile" onclick="affichecacheActions()"><img id='display' src='/www/moine7u/amtj-fmp/logos/down.png'/></h2></div>
+            <section id="acts">
+                <div class='search'><form method="get" action="{{app.urlFor('rechercheProjet')}}"><input type="text" name="criteres" id="search" placeholder="Rechercher..." size="20"/><input type="submit" id="searchb" value=">"/></form></div>
+            {% if session.user.id_user is defined %}
+                <div class='menu'>
+                    <h2 onclick="afficheCacheMenu()">Bienvenue {{session.user.email}}</h2>
+                    <div>
+                        {% if session.user.droit == 1 %}
+                        <a href="{{app.urlFor('afficherFormCreationCompteAdmin')}}"><input type="button" value="Ajouter admin" /></a>
+                        {% endif %}
+                        <a href="{{app.urlFor('ajouterProjet')}}"><input type="button" value="Nouveau projet"/></a>
+                        <a href="{{app.urlFor('afficherProfil', {'id': session.user.idutilisateur})}}"><input type="button" id="myprofile" value="Mon profil"/></a>
+                        <a href="{{app.urlFor('afficherFormModificationCompte')}}"><input type="button" id="modify" value="Modifier profil"/></a>
+                        <a href="{{app.urlFor('destroy')}}"><input type="button" id="destroy" value="Se déconnecter"/></a>
+                    </div>
+                </div>
+            {% else %}
+                <div class='action' id='newconnect'><a href='{{app.urlFor('afficherFormCreationCompte')}}'>Se connecter</a></div>
+            {% endif %}
+            </section>
+        </header>
+
+	{%block mainsection%}
+
+            
+	{%endblock%}
+
+        <!--<footer id="footer">
+            <p>Copyright 2014 Team FundMyProject</p>
+        </footer>-->
+    </body>
+</html>

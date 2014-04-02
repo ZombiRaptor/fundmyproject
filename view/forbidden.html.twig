@@ -1,0 +1,53 @@
+{%extends "main.html.twig"%}
+
+{% block mainhead %}
+<link rel='stylesheet' href='/www/moine7u/amtj-fmp/css/error.css'/>
+<script>
+    $(document).ready(function() {
+
+        document.getElementById('ahahah').play();
+
+    });
+
+    function Fun() {
+        setInterval(function() {
+            $('#youdidnt').append("<p>YOU DIDN'T SAY THE MAGIC WORD !!!</p>");
+            var i = $(' #youdidnt p').length;
+            if (i == 21) {
+                $('#youdidnt p').remove();
+
+            }
+        }, 500);
+    }
+
+    window.onload = Fun;
+</script>
+{% endblock %}
+
+{% block mainsection %}
+<section id="page">
+    <audio id="ahahah" controls style="display:none;" loop="loop">
+        <source src="/www/moine7u/amtj-fmp/img/forbidden.mp3">
+    </audio>
+    <section>
+        <div id='forbidden'>
+            <img id="dennis" src="/www/moine7u/amtj-fmp/img/forbidden.gif"/>
+            <div id="youdidnt">
+                <div id="terminalview">
+                    <div id="preamble">
+                        Jurassic Park, System Security Interface
+                        <br></br>
+                        Version 4.0.5, Alpha E
+                        <br></br>
+                        Ready...
+                        <br></br>
+                        > access security
+                        <br></br>
+                        access: PERMISSION DENIED...and...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}

@@ -1,0 +1,57 @@
+{%extends "main.html.twig"%}
+
+{% block mainhead %}
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/connexionUser.css" />
+<link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
+
+<script>
+    $(document).ready(function() {
+        if ($('#close').css('display') === "none") {
+            $('#msg').click(function() {
+                $('#msg').slideUp(100);
+            })
+        } else {
+            $('#close').click(function() {
+                $('#msg').slideUp(100);
+            });
+        }
+    });
+</script>
+{% endblock %}
+
+{% block mainsection %}
+<section id="page">
+    <div>
+    {% if msg != ''%}
+        <h2 id="msg">{{msg}}<img id="close" style='width:20px'src='/www/moine7u/amtj-fmp/logos/closered.png'/></h2>
+    {% endif %}
+        <section id="connection">
+            <h1>Connexion</h1>
+            <article>
+                <form method="POST" action="{{app.urlFor('verifCompte')}}">
+                    <label>Email</label><input type="text" id="mail" name="mail"/><br/>
+                    <label>Mot de passe</label><input type="password" id="mdp" name="mdp"/><br/>
+                    <input type="submit" value="Se connecter"/>
+                </form>
+                <a href="{{app.urlFor('connexionFB')}}"><img src='/www/moine7u/amtj-fmp/logos/connexion-avec-facebook.gif'/></a>
+            </article>
+        </section> 
+        <section id="inscription">
+            <h1>Inscription</h1>
+            <article>
+
+                <form method="post" action="{{app.urlFor('ajouterCompte')}}">
+                    <label>Email*</label><input value="{{post.email}}" type="text" name="email" id="email"/><br/>
+                    <label>Mot de passe*</label><input type="password" name="mdp" id="mdp"/><br/>
+                    <label>Confirmer*</label><input type="password" name="remdp" id="remdp"/><br/>
+                    <label>Nom</label><input value="{{post.nom}}" type="text" name="nom" id="nom"/><br/>
+                    <label>Prénom</label><input value="{{post.prenom}}" type="text" name="prenom" id="prenom"/><br/>
+
+
+                    <input type="submit" value="Envoyer"/>  
+                </form>    
+            </article>
+        </section>
+    </div>
+</section>
+{% endblock %}

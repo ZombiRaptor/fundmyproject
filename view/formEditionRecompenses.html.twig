@@ -1,0 +1,42 @@
+{% extends "main.html.twig" %}
+{% block mainhead %}
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/formulaireEdition.css" />
+<link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
+
+{% endblock %}
+
+{% block mainsection %}
+<section id="page">
+{% include 'listeEtapes.html.twig' %}
+    <h1>Récompenses</h1>
+    <section>
+
+        <div name="listRecompenses" id="listRecompenses">
+        {% for recompense in recompenses %}
+            <article>
+                <p><strong>{{recompense.descrec}}</strong> pour <strong>{{recompense.butatteint}} &euro;</strong> </p>
+                <p>Temps de livraison de <strong>{{recompense.tpslivraison}}</strong> jours{% if recompense.limite == 0 %} pour un nombre <strong>illimité</strong> de personnes{% else%} pour <strong>{{recompense.limite}}</strong> personnes maximum.{% endif%}</p>
+                <a href="{{app.urlFor('supprimerRecompense', {'idprojet': recompense.idprojet, 'idrecompense': recompense.idrecompense})}}"><img src="../../logos/bin2.png" style="width:25px" alt="supprimer"/></a>
+            </article>
+        {% endfor %}
+        </div>
+        <form method="post" action="{{app.urlFor('editionRecompenses', {'id': projet.idprojet})}}">
+
+            <article>
+                <label for="butrecompense">But a atteindre</label><input type="number" name="butrec" id="butrec" value="{{post.recompense.butatteint}}" /></br>
+                <label for="descriptionrec">Description de la récompense</label><textarea rows="4" cols="50" maxlength="255" name="descriptionrec" id="descriptionrec" value="{{post.recompense.descrec}}"></textarea></br>
+                <label for="tpslivraison">Temps de livraison</label><input type="number" name="tpslivraison" id="tpslivraison" value="{{post.recompensetpslivraison}}"/></br>
+                <label for="nbbackers">Nombre de backers max (0 si pas de limite)</label><input type="number" value="0" name="nbbackers" id="nbbackers" value="{{post.recompense.limite}}"/><br/>
+            </article>
+            <ul>
+                <li><input type="submit" value="Envoyer"/></li>
+                <li><input type="reset" value="Effacer"/></li>
+            </ul>
+        </form>
+        <ul>
+            <li><input type="button" name="precedent" value="Precedent" onclick="self.location.href = '/www/moine7u/amtj-fmp/projet/{{projet.idprojet}}/media'" /></li>
+            <li><input type="button" name="suivant" value="Suivant" onclick="self.location.href = '/www/moine7u/amtj-fmp/projet/{{projet.idprojet}}/bio'" /></li>
+        </ul>
+    </section>
+</section>
+{% endblock %}

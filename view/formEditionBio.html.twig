@@ -1,0 +1,34 @@
+{%extends "main.html.twig"%}
+{% block mainhead %}
+<link rel="stylesheet" href="/www/moine7u/amtj-fmp/css/formulaireEdition.css" />
+<link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
+
+{% endblock %}
+{% block mainsection %}
+<section id="page">
+{% include 'listeEtapes.html.twig' %}
+    <h1>Biographie</h1>
+    <section>
+
+        <form method="post" action="{{app.urlFor('editionBio', {'id': projet.idprojet})}}">
+            <article>
+                <label for="pays">Pays</label><input value="{{utilisateur.pays}}" type="text" name="pays" id="pays" required/></br>
+                <label for="adresse">Adresse</label><input value="{{utilisateur.adresse}}" type="text" name="adresse" id="adresse" required/></br>
+                <label for="ville">Ville</label><input value="{{utilisateur.ville}}" type="text" name="ville" id="ville" required/></br>
+                <label for="cp">Code Postal</label><input value="{{utilisateur.cp}}" type="text" name="cp" id="cp" required/></br>
+
+                <label for="nSoc">Nom société</label><input value="{{utilisateur.nomsociete}}" type="text" name="nSoc" id="nSoc" required/></br>
+                <label for="bio">Biographie</label><textarea  name="bio" id="bio" required>{{utilisateur.biographie}}</textarea></br>
+                <label for="tel">Téléphone</label><input value="{{utilisateur.tel}}" type="text" name="tel" id="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required/></br>
+            </article>
+            <ul>
+                <li><input type="submit" value="Valider"/></li>
+                <li><input type="reset" value="Effacer"/></li>
+            </ul>
+        </form>
+        <ul>
+            <li><input type="button" name="precedent" value="Precedent" onclick="self.location.href = '/www/moine7u/amtj-fmp/projet/{{projet.idprojet}}/recompenses'" /></li>
+        </ul>
+    </section>
+</section>
+{% endblock %}

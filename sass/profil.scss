@@ -1,0 +1,505 @@
+@import "susy";
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;  
+$gutter-width: 0.5em;
+$grid-padding: 0.2em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12 1854px;
+$break3:1855px 16;
+
+body{
+    background-image: url(../img/pattern1.png);  
+    font-family: "Open Sans",arial,sans-serif;
+}
+body>#page{
+    @include box-sizing(border-box);
+    @include container($total-columns,$break1,$break2, $break3); 
+    #user{
+        @include span-columns($total-columns omega);
+        margin-top:2%;
+        &>#profil{
+            @include span-columns(4 omega);
+            background:white;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+
+            &>#photo{
+                @include pre(1, 4);
+                @include span-columns(2);
+                @include post(1, 4);
+                position:relative;
+                margin-top: 3%;
+                border:4px solid #fff;
+                box-shadow: 0px 0px 0px 1px #DCDCDC;
+
+                &>#side{
+                    position:absolute;
+                    bottom: -3px;
+                    left:-126px;
+                    width: 50px;
+                    list-style: none outside none;
+
+                    &>li{
+                        margin: 6% 0;
+                        padding-top: 4%;
+                        padding-left:4%;
+                        border-radius: 1px 0px 0px 1px;
+                        width:120px;
+                        height:100px;
+                        &>img{
+                            vertical-align: middle;
+                        }
+                    }
+                    &>#fb{
+                        background:#3b5998;
+                        &>a>img{
+                            padding-left:30%;
+                            padding-top:7%;
+                            width:2.5em;
+                        }
+                        &:hover{
+                            background:#8b9dc3;
+                        }
+                    }
+                    &>#website{
+                        background : #174E73;
+                        &>a>img{
+                            padding-left:7%;
+                            width:6em;
+                        }
+                        &:hover{
+                            background:#216FA3;
+                        }
+                    }
+                }
+                &>img{
+                    width:100%;
+
+                }
+            }
+            &>#infos{
+                @include span-columns(4 omega);
+                &>#nomprenom{
+                    margin : 0;
+                    margin-top: 4%;
+                    padding: 0;
+                    text-align: center;
+                    font-size: 3em;
+                    color: #e74c3c;
+                }
+                &>#location{
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 2.5em;
+                    &>img{
+                        vertical-align: middle;
+                        width:0.7em;
+                    }
+                }
+                &>#bio, #tel, #date{
+                    margin:2%;
+                    margin-bottom: 3%;
+                    text-align: justify;
+                    font-size:1.5em;
+                    &>label{
+                        font-weight:bold;
+                    }
+                }
+            }
+        }
+        &>#tabs{
+            @include span-columns(4 omega);
+            background: white;
+            margin:3% 0;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+
+            &>ul>li{
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                display:inline;
+                float:left;
+                width:33.33%;
+                text-align: center;
+                vertical-align:middle;
+                padding:2% 0;
+                border: 1px solid #DCDCDC;
+                font-size:2.5em;
+                background:#bdc3c7;
+                position:relative;
+                &>a{
+                    text-decoration: none;
+                    color:black;
+                }
+                &>span{
+                    z-index:2;
+                    background:#c0392b;
+                    padding : 4%;
+                    position: absolute;
+                    right: -5px;
+                    top: -5px;
+                    border-radius: 10px 1px 9px 0px;
+                    color:white;
+                }
+                &:hover{
+                    cursor:pointer;
+                }
+            }
+            .ui-tabs-active{
+                border-bottom:0;
+                background:white;
+            }
+            &>div{
+                font-size: 2.5em;
+                padding: 2%;
+                padding-top: 13%;
+
+                &>a{
+                    text-decoration : none;
+                    color:black;
+
+                    &>article{
+                        @include span-columns(4 omega);
+                        border : 1px solid black;
+                        box-sizing:border-box;
+                        -moz-box-sizing:border-box;
+                        -webkit-box-sizing:border-box;
+                        border:4px solid #fff;
+                        box-shadow: 0px 0px 0px 1px #DCDCDC;
+                        margin-bottom:2%;
+                        &>#photoprojet{
+                            @include span-columns(1, 4);
+                            &>img{
+                                width:100%;
+                            }
+                        }
+                        &>div{
+                            @include span-columns(3 omega); 
+                            font-size:1em;
+                            &>#titre{
+                                font-weight: bold;
+                                margin-left:5%;
+                                &:first-letter{
+                                    text-transform: uppercase;
+                                }
+                            }
+                            &>#but,#recu, #tps{
+                                margin-left:5%;
+                                color:#7f8c8d;
+                            }
+                        }
+                        &>#amount{
+                            @include span-columns(4 omega);
+                            margin-top:3%;
+                            margin-bottom:1%;
+
+                            &>strong{
+                                @include span-columns(1, 4);
+                                font-weight:bold;
+                                text-align:center;
+                            }
+                            &>meter{
+                                @include span-columns(3 omega, 4);
+                            }
+                        }
+                    }
+                }
+                &>h2{
+                    @include span-columns(4 omega);
+                    text-align:center;
+                    margin: 2% 0;
+                    font-weight : bold;
+                    &>img{
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+    @include at-breakpoint($break1){
+        #user>#profil{
+            padding-bottom:2%;
+            &>#photo{
+                @include pre(0);
+                @include span-columns(2, 8);
+                @include post(0);
+                margin-left:8%;
+                &>#side{
+                    left:-48px;
+                    width:100px;
+                    &>li{
+                        width:40px;
+                        height:40px;
+                    }
+                    &>#fb{
+                        &>a>img{
+                            padding-left:10px;
+                            width:16px;
+                        }
+                    }
+                    &>#website{
+                        &>a>img{
+                            width:35px;
+                        }
+                    }
+                }
+            }
+            &>#infos{
+                @include span-columns(5 omega, 8);
+                margin-top: 2%;
+                margin-right: 1%;
+                &>#nomprenom, #location{
+                    text-align: left;
+                }
+                &>#nomprenom{
+                    margin-top: 2%;
+                    font-size:25px;
+                }
+                &>#location, #bio, #tel, #date{
+                    font-size:15px;
+                    margin-left: 0;
+                }
+            }
+        }
+        #user>#tabs{
+            &>ul>li{
+                padding : 1% 0;
+                font-size:14px;
+                &>a{
+                    font-size:15px;
+                }
+                &>span{
+                    padding:2%;
+                }
+            }
+            &>div{
+                @include span-columns($total-columns omega);
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                padding-top: 3%;
+                font-size:14px;
+                &>a{
+                    @include span-columns(3, 12);
+                    &>article{
+                        box-sizing:border-box;
+                        -moz-box-sizing:border-box;
+                        -webkit-box-sizing:border-box;
+                        border:4px solid #fff;
+                        box-shadow: 0px 0px 0px 1px #DCDCDC;
+                        font-size:13px;
+                        &>#photoprojet{
+                            @include span-columns($total-columns omega);
+                            &>img{
+                                width:100%;
+                            }
+                        }
+                        &>div{
+                            @include span-columns($total-columns omega);
+                            font-size:14px;
+
+                        }
+                        &>#amount{
+                            @include span-columns($total-columns omega);
+                            &>strong{
+                                @include span-columns(1, 4);
+                                margin-right:0;
+                            }
+                            &>meter{
+                                @include span-columns(3 omega, 4);
+                                height:13px;
+                            }
+                        }
+
+                    }
+                    &:nth-child(4n){
+                        @include span-columns(3 omega, 12);
+                    }
+                }
+            }
+        }
+    }
+
+    @include at-breakpoint($break2){
+        @include pre(1, 12);
+        @include span-columns(10 omega, 12);
+        @include post(1, 12);
+        #user{
+            margin-top:2%;
+            &>#profil{
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                padding:2%;
+                &>#photo{
+                    //@include span-columns(2, 10);
+                    height:150px;
+                    width: 150px;
+                    margin:0;
+                    margin-left:6%;
+                    &>#side{
+                        left:-46px;
+                        &>li{
+                            height:40px;
+                            width:40px;
+                        }
+                        &>#fb>a>img{
+                            width:15px;
+                            padding-top:13%;
+                        }
+                        &>#website>a>img{
+                            width:33px;
+                            padding-top:7%;
+                        }    
+                    }
+                }
+                &>#infos{
+                    @include span-columns(8 omega, 12);
+                    &>#nomprenom, #location{
+                        text-align: left;
+                        margin-top:0;
+                        font-size:25px;
+                    }
+                    &>#location, #bio, #tel, #date{
+                        font-size:15px;
+                        margin-left:0;
+                    }
+                }
+
+            }
+            &>#tabs{
+                &>ul>li{
+                    padding:1%;
+                    font-size:13px;
+                    &>span{
+                        font-size:12px;
+                        padding:2%;
+                    }
+                }
+                &>div{
+                    padding-top:6%;
+                    &>h2{
+                        font-size:14px;
+                    }
+                    &>a{
+                        @include span-columns(3, 12);
+                        &>article{
+                            margin-bottom:3%;
+                            &>#photoprojet{
+                                @include span-columns($total-columns omega);
+                                &>img{
+                                    width:100%;
+                                }
+                            }
+                            &>div{
+                                @include span-columns($total-columns omega);
+                                font-size:13px;
+                                &>#titre, #tps, #but, #recu{
+                                    margin-left:5%;
+                                }
+                            }
+                        }
+
+                        &:nth-child(4n){
+                            @include span-columns(3 omega, 12);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include at-breakpoint($break3){
+        @include pre(4, 16);
+        @include span-columns(8 omega, 16);
+        @include post(4, 16);
+        #user{
+            margin-top:2%;
+            &>#profil{
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                padding:2%;
+                &>#photo{
+                    //@include span-columns(2, 10);
+                    height:150px;
+                    width: 150px;
+                    margin:0;
+                    margin-left:6%;
+                    &>#side{
+                        left:-46px;
+                        &>li{
+                            height:40px;
+                            width:40px;
+                        }
+                        &>#fb>a>img{
+                            width:15px;
+                            padding-top:13%;
+                        }
+                        &>#website>a>img{
+                            width:33px;
+                            padding-top:7%;
+                        }    
+                    }
+                }
+                &>#infos{
+                    @include span-columns(8 omega, 12);
+                    &>#nomprenom, #location{
+                        text-align: left;
+                        margin-top:0;
+                        font-size:25px;
+                    }
+                    &>#location, #bio, #tel, #date{
+                        font-size:15px;
+                        margin-left:0;
+                    }
+                }
+
+            }
+            &>#tabs{
+                &>ul>li{
+                    padding:1%;
+                    font-size:13px;
+                    &>span{
+                        font-size:12px;
+                        padding:2%;
+                    }
+                }
+                &>div{
+                    padding-top:6%;
+                    &>h2{
+                        font-size:14px;
+                    }
+                    &>a{
+                        @include span-columns(3, 12);
+                        &>article{
+                            margin-bottom:3%;
+                            &>#photoprojet{
+                                @include span-columns($total-columns omega);
+                                &>img{
+                                    width:100%;
+                                }
+                            }
+                            &>div{
+                                @include span-columns($total-columns omega);
+                                font-size:13px;
+                                &>#titre, #tps, #but, #recu{
+                                    margin-left:5%;
+                                }
+                            }
+                        }
+
+                        &:nth-child(4n){
+                            @include span-columns(3 omega, 12);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

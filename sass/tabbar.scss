@@ -1,0 +1,1044 @@
+@import "susy";
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;
+$gutter-width: 0.5em;
+$grid-padding: 0.2em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12 1854px;
+$break3:1855px 16;
+
+body{
+    background-image: url(/www/moine7u/amtj-fmp/img/pattern1.png);
+    font-family: "Open Sans",arial,sans-serif;
+}
+body>#page{
+    @include box-sizing(border-box);
+    @include container($total-columns,$break1,$break2, $break3);
+    h1{
+        @include span-columns(4 omega);
+        padding: 1em 0px;
+        font-size: 2.5em;
+        line-height: 100%;
+        color: #fff;
+        display:inline-block;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.1s ease-in-out;
+        -webkit-transition: background 0.1s ease-in-out;
+        -moz-transition: background 0.1s ease-in-out;
+        -ms-transition: background 0.1s ease-in-out;
+        -o-transition: background 0.1s ease-in-out;
+        color: #fff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 1px;
+    }
+    #actions{
+        @include span-columns($total-columns omega);
+        background:#3498db;
+        box-shadow: 3px 3px 5px 2px #7f8c8d;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        padding:1%;
+
+        &>ul>li{
+            @include span-columns(2, 4);
+
+            box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            text-align:center;
+            font-size:2.5em;
+            padding:2%;
+            background:#2980b9;
+            &>a{
+                text-decoration: none;
+                color:white;
+            }
+            &:last-child{
+                @include span-columns(2 omega, 4);
+            }
+        }
+    }
+    #financescreator{
+        margin-top:2%;
+    }
+    #finances{
+        @include span-columns($total-columns omega);
+        background: #FFFFFF;
+        box-shadow: 3px 3px 5px 2px #7f8c8d;
+        margin-top:2%;
+        &>h1{
+            background-color: #e74c3c;
+
+            &:hover{
+                background-color: #c0392b;
+            }
+        }
+
+        &>#finance{
+            @include span-columns(4 omega);
+            margin-top: 3px;
+            &>h3{
+                @include span-columns(2);
+                margin-top:1%;
+                margin-bottom:1%;
+                font-size:2.5em;
+                &>img{
+                    margin-left: 5%;
+                    vertical-align: middle;
+                }
+            }
+            &>#progress{
+                padding-top:23%;
+                padding-bottom:7%;
+                padding-right:2%;
+                &>strong{
+                    @include span-columns(1, 4);
+                    font-weight:bold;
+                    text-align: center;
+                    font-size:2.5em;
+                }
+                &>meter{
+                    @include span-columns(3 omega, 4);
+                    height:2.5em;
+                }
+            }
+            &>h3:nth-child(2n){
+                @include span-columns(2 omega);
+            }
+
+        }
+
+    }
+    #infocreator{
+        @include span-columns($total-columns omega);
+        background: #FFFFFF;
+        box-shadow: 3px 3px 5px 2px #7f8c8d;
+        margin-top:2%;
+        margin-bottom:2%;
+        &>h1{
+            background-color: #e74c3c;
+            &:hover{
+                background-color: #c0392b;
+            }
+        }
+        &>#creator{
+            @include span-columns(4 omega);
+            margin-top: 3px;
+            font-size:2.5em;
+            box-shadow: 0px 1px 0px 0px #7f8c8d;
+            border-style: solid;
+            border-color: #bdc3c7;
+
+            &>h3{
+                @include span-columns(4 omega);
+                margin-top:1%;
+                margin-bottom:1%;
+                text-align:justify;
+                &>img{
+                    margin-left: 2.5%;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    #infoprojet{
+
+        &>#projet{
+            @include span-columns($total-columns);
+            background: #FFFFFF;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+            box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            padding:1%;
+            margin-top:2%;
+            position:relative;
+            &>#author{
+                display:none;
+            }
+            &>h1{
+                font-size: 2.5em;
+                margin-left:5%;
+                margin-top: 3%;
+                margin-bottom:3%;
+                text-transform: capitalize;
+                color:black;
+                font-weight:normal;
+                &:hover{
+                    cursor:default;
+                }
+            }
+            #follow{
+                position:absolute;
+                right:2%;
+                color:black;
+                text-decoration:none;
+                font-size:2.5em;
+                &>img{
+                    vertical-align: middle;
+                    width:1em;
+                }
+            }
+
+            &>h3{
+                @include span-columns(2);
+                text-transform: capitalize;
+                font-size:2.5em;
+                &>img{
+                    margin-left: 5%;
+                    vertical-align: middle;
+                }  
+            }
+            &>h3:nth-child(2n){
+                @include span-columns(2 omega);
+            }
+            &>#video{
+                @include span-columns($total-columns omega);
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                border:4px solid #fff;
+                box-shadow: 0px 0px 0px 1px #DCDCDC;
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 35px;
+                height: 0;
+                overflow: hidden;
+                &>iframe{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+
+
+
+
+        &>#soutenir{
+            @include span-columns($total-columns omega);
+            background:white;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+            margin-top:2%;
+
+            &>h1{
+                background-color: #2ecc71;
+                font-size:2.5em;
+                padding:4% 0;
+                &:hover{
+                    background-color: #27ae60;
+                }
+            }
+            &>form{
+                display:none;
+                background:white;
+                &>#soutien{
+                    @include span-columns($total-columns omega);
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    padding:1%;
+                    margin-top:1%;
+                    &>label{
+                        @include span-columns(1, $total-columns);
+                        display:block;
+                        float:left;
+                        margin-top:5px;
+                        font-size:2.5em;
+                    }
+                    &>input{
+                        @include span-columns(3 omega, $total-columns);
+                        float: left;
+                        padding:1%;
+                    }
+                }
+                &>#confirm{
+                    @include span-columns($total-columns omega);
+                    border: 1px ridge #2ecc71;
+                    background:#2ecc71;
+                    color:white;
+                    padding:2%;
+                    &:hover{
+                        background:#27ae60;
+                        cursor:pointer;
+                    }
+                }
+            }
+            .fb-like-box{
+                @include span-columns($total-columns omega);
+                font-size:2.5em;
+            }
+
+        }
+        &>#rewards{
+            @include span-columns($total-columns omega);
+            text-shadow:none;
+            color:black;
+            margin:2% 0;
+            box-shadow: 3px 3px 5px 2px #7f8c8d;
+            &>#buttonreward{
+                background-color: #e74c3c;
+                padding:1em 0;
+                font-size:2.5em;
+                &:hover{
+                    background-color: #c0392b;
+                }
+            }
+            &>section{
+                display:none;
+                &>article{
+                    background: #FFFFFF;
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    border:4px solid #fff;
+                    box-shadow: 0px 0px 0px 1px #DCDCDC;
+                    &>h1{
+                        color: black;
+                        text-shadow: none;
+                        font-weight:bold;
+                        padding:0;
+                        padding-top:2%;
+                        margin:0;
+                        font-size:2.5em;
+                    }
+                    &>h3{
+                        margin-left: 2%;
+                        margin-top : 1%;
+                        margin-bottom : 1%;
+                        font-size:1.5em;
+                        color:#7f8c8d;
+                        &>img{
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #infoprojet2{
+        &>#infos{
+            @include span-columns($total-columns omega);
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
+            &>#tabs{
+                @include span-columns(4 omega);
+                background: white;
+                margin-top:3%;
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                margin-bottom:2%;
+                &>ul>li{
+                    @include span-columns(4, 12);
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    display:inline;
+                    float:left;
+                    text-align: center;
+                    vertical-align:middle;
+                    padding:3% 0;
+                    border: 1px solid #DCDCDC;
+                    font-size:2.5em;
+                    background:#bdc3c7;
+                    position:relative;
+                    &:nth-child(3){
+                        @include span-columns(4 omega, 12);
+                    }
+                    &>a{
+                        text-decoration: none;
+                        color:black;
+                    }
+                    &>div{
+                        z-index:2;
+                        background:#c0392b;
+                        padding : 4%;
+                        position: absolute;
+                        right: -5px;
+                        top: -5px;
+                        border-radius: 10px 1px 9px 0px;
+                        color:white;
+                    }
+                    &:hover{
+                        cursor:pointer;
+                    }
+                }
+                .ui-tabs-active{
+                    border-bottom:0;
+                    background:white;
+                }
+                &>div{
+                    &>p{
+                        margin:3% 2%;
+                        padding-top: 10%;
+                        text-align: justify;
+                        font-size:2.5em;
+                    }
+                }
+                &>#tab-1{
+                    @include span-columns($total-columns omega);
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    padding:2%;
+                    font-size:1em;
+                    &>p{
+                        @include span-columns($total-columns omega);
+                        box-sizing:border-box;
+                        -moz-box-sizing:border-box;
+                        -webkit-box-sizing:border-box;
+                        & >.image{
+                            max-width:70%;
+                            height:auto;
+                            text-align:center;
+                            margin:0 auto;
+                            &>img{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+                &>#bankers{
+                    &>h2{
+                        @include span-columns($total-columns omega);
+                        text-align:center;
+                        font-size:2.5em;
+                        margin: 2% 0;
+                        &>img{
+                            vertical-align: middle;
+                        }
+                    }
+                    &>section{
+                        @include span-columns($total-columns omega);
+                        box-sizing:border-box;
+                        -moz-box-sizing:border-box;
+                        -webkit-box-sizing:border-box;
+                        padding:1%;
+                        &>article{
+                            @include span-columns($total-columns omega);
+                            box-sizing:border-box;
+                            -moz-box-sizing:border-box;
+                            -webkit-box-sizing:border-box;
+                            border:4px solid #fff;
+                            box-shadow: 0px 0px 0px 1px #DCDCDC;
+                            font-size:2.5em;
+                            margin-top:1%;
+                            &:first-child{
+                                margin-top:0;
+                            }
+                            &>#photobanker{
+                                @include span-columns(0.4, 4);
+                                &>a>img{
+                                    @include span-columns($total-columns omega);
+                                }
+                            }
+                            &>p:nth-child(2){
+                                @include span-columns(2.5, 4);
+                            }
+                            &>p:nth-child(3){
+                                @include span-columns(1 omega, 4);
+                                font-weight:bold;
+                                text-align:center;
+                            }
+                        }
+                    }
+                }
+                &>#comments{
+                    &>section{
+                        &>#commentaires{
+                            box-sizing:border-box;
+                            -moz-box-sizing:border-box;
+                            -webkit-box-sizing:border-box;
+                            padding:1%;
+                            &>article{
+                                @include span-columns($total-columns omega);
+                                box-sizing:border-box;
+                                -moz-box-sizing:border-box;
+                                -webkit-box-sizing:border-box;
+                                border:4px solid #fff;
+                                box-shadow: 0px 0px 0px 1px #DCDCDC;
+                                font-size:2.5em;
+                                margin-top:1%;
+                                position:relative;
+                                &>#photocomment{
+                                    @include span-columns(0.4, 4);
+                                    &>a>img{
+                                        @include span-columns($total-columns omega);
+                                    }
+                                }
+                                &>h2{
+                                    font-weight:bold;
+                                }
+                                &>a{
+                                    position:absolute;
+                                    right:1%;
+                                    top:1%;
+                                    &>img{
+                                        width:1.5em;
+                                    }
+                                }
+                            }
+                        }
+                        &>form{
+                            @include span-columns($total-columns omega);
+                            box-sizing:border-box;
+                            -moz-box-sizing:border-box;
+                            -webkit-box-sizing:border-box;
+                            float:right;
+                            padding:1%;
+                            &>section{
+                                @include span-columns($total-columns omega);
+                                box-sizing:border-box;
+                                -moz-box-sizing:border-box;
+                                -webkit-box-sizing:border-box;
+                                border:4px solid #fff;
+                                box-shadow: 0px 0px 0px 1px #DCDCDC;
+                                &>textarea{
+                                    @include span-columns($total-columns omega);
+                                    font-size:2.5em;
+                                }
+                                &>#submit{
+                                    @include span-columns($total-columns omega);
+                                    border:1px ridge #2ecc71;
+                                    background:#2ecc71;
+                                    color:white;
+                                    font-size:2.5em;
+                                    padding:1%;
+                                }
+                            }
+                        }
+                        &>h2{
+                            @include span-columns($total-columns omega);
+                            text-align:center;
+                            font-size:2.5em;
+                            margin: 2% 0;
+                            &>img{
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    @include at-breakpoint($break1){
+        background-image: url(../img/pattern1.png);
+        h1{
+            font-size:14px;
+            padding:2% 0;
+        }
+        h3{
+            font-size:13px;
+        }
+        #actions{
+            &>ul>li{
+                @include span-columns(2, 8);
+                padding:1%;
+                font-size:13px;
+                &:last-child{
+                    @include span-columns(1, 8);
+                }
+            }
+        }
+        #financescreator{
+            @include span-columns(3 omega);
+            font-size:13px;
+            &>#finances{
+                background: #FFFFFF;
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                margin-top:0;
+                &>h1{
+                    margin-top:0;
+                }
+                &>#finance{
+                    &>h3{
+                        font-size:13px;
+                        &>img{
+                            width:20px;
+                        }
+                    }
+                    &>#progress{
+                        padding-bottom: 8%;
+                        &>strong{
+                            font-size:13px;
+                        }
+                        &>meter{
+                            height:13px;
+                        }
+                    }
+                }
+            }
+            &>#infocreator{
+                background: #FFFFFF;
+                margin-top:4%;
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                &>h1{
+                    margin-top:0;
+                }   
+            }
+        }
+
+        #infoprojet{
+            &>#projet{
+                @include span-columns(5, 8);
+                box-shadow: 3px 3px 5px 2px #7f8c8d;
+                margin:0;
+                position:relative;
+                margin-top:2%;
+                &>#author{
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    position:absolute;
+                    top:2%;
+                    left:2%;
+                    border:4px solid #fff;
+                    box-shadow: 0px 0px 0px 1px #DCDCDC;
+                    display:block;
+                    &>a>img{
+                        width:55px;
+                        height:55px;
+                    }
+                }
+                &>h1{
+                    font-size:17px;
+                }
+                &>h3, #follow{
+                    font-size:13px;
+                }
+            }
+
+            &>#soutenir{
+                @include span-columns(3 omega);
+                margin-top:0;
+                font-size:13px;
+                &>h1{
+                    @include span-columns($total-columns omega);
+                    padding:4% 0;
+                    font-size:14px;
+                }
+                &>form{
+                    &>#soutien>label{
+                        font-size:13px;
+                    }
+                }
+                &>.fb-like-box{
+                    @include span-columns($total-columns omega);
+                    background:white;
+                }
+            }
+
+            &>#rewards{
+                @include span-columns(3 omega, 8);
+                &>#buttonreward{
+                    font-size:14px;
+                    padding:2% 0;
+                }
+                &>#reward{
+                    display:block;
+                    &>article{
+                        &>h1{
+                            font-size:15px
+                        }
+                        &>h3{
+                            font-size:13px;
+                        }
+                    }
+                }
+            }
+        }
+        #infoprojet2{
+            @include span-columns(5, 8);
+            &>#infos>#tabs{
+                padding-bottom: 2%;
+                margin-bottom:2%;
+                &>ul>li{
+                    @include span-columns(4, 12);
+                    padding:1.5%;
+                    font-size:13px;
+                    &:nth-child(3){
+                        @include span-columns(4 omega, 12);
+                    }
+                    &>a{
+                        font-size:15px;
+                    }
+                }
+
+                &>#tab-1{
+                    font-size:13px;
+                }
+                &>#comments>section{
+                    &>h2{
+                        font-size:14px;
+                    }
+                    &>#commentaires>article{
+                        font-size:13px;
+                    }
+                    &>form>section>#submit{
+                        font-size:14px;
+                    }
+                }
+                &>#bankers{
+                    &>h2{
+                        font-size:14px;
+                    }
+                    &>section>article{
+                        font-size:13px;
+                    }
+                }
+                &>div>p{
+                    padding-top:4%;
+                    font-size:15px;
+                }
+            }
+        }
+    }
+    @include at-breakpoint($break2){
+        @include pre(1, 12);
+        @include span-columns(10 omega, 12);
+        @include post(1, 12);
+        h1{
+            font-size:14px;
+            padding:2% 0;
+        }
+        h3{
+            font-size:13px;
+        }
+        #actions{
+            padding:0.5%;
+            &>ul>li{
+                @include span-columns(2, 12);
+                padding:1%;
+                font-size:13px;
+                &:last-child{
+                    @include span-columns(2, 12);
+                }
+            }
+        }
+        #financescreator{
+            @include span-columns(4 omega);
+            &>#finances{
+                margin-top:0;
+                &>h1{
+                    margin-top:0;
+                }
+                &>#finance{
+                    &>h3{
+                        font-size:13px;
+                    }
+                    &>#progress{
+                        &>strong{
+                            font-size:13px;
+                        }
+                        &>meter{
+                            height:13px;
+                        }
+                    }
+                }
+            }
+
+            &>#infocreator{
+                margin-top:4%;
+                &>h1{
+                    margin-top:0;
+                }
+            }
+        }
+        #infoprojet{
+
+            &>#projet{
+                @include span-columns(8, 12);
+                position: relative;
+                &>#author{
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    position:absolute;
+                    top:2%;
+                    left:2%;
+                    border:4px solid #fff;
+                    box-shadow: 0px 0px 0px 1px #DCDCDC;
+                    display:block;
+                    &>a>img{
+                        width:70px;
+                        height:70px;
+                    }
+                }
+                &>h1{
+                    font-size:20px;
+                }
+                &>h3, #follow{
+                    font-size:13px;
+                }
+            }
+            &>#soutenir{
+                @include span-columns(4 omega);
+
+                &>h1{
+                    @include span-columns($total-columns omega);
+                    padding:4% 0;
+                    font-size:14px;
+                }
+                &>form{
+                    &>#soutien>label{
+                        font-size:13px;
+                    }
+                }
+                &>.fb-like-box{
+                    @include span-columns($total-columns omega);
+                }
+            }
+            &>#rewards{
+                @include span-columns(4 omega);
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                &>#buttonreward{
+                    font-size:14px;
+                    padding:2% 0;
+                }
+                &>section{
+                    display:block;
+                    &>article{
+                        @include span-columns($total-columns omega);
+                        &>h1{
+                            font-size:15px;
+                        }
+                        &>h3{
+                            font-size:13px;
+                        }
+                    }
+                }
+            }
+        }
+        #infoprojet2{
+            @include span-columns(8, 12);
+            &>#infos>#tabs{
+
+                margin-bottom:2%;
+                &>ul>li{
+                    font-size:15px;
+                    padding:1% 0;
+                    &>div{
+                        padding:2%;
+                    }
+                }
+                &>div>p{
+                    padding-top:2%;
+                    font-size:15px;
+                }
+                &>#tab-1{
+                    font-size:14px;
+                    &>p{
+                        @include span-columns($total-columns omega);
+                        &>img{
+                            @include span-columns($total-columns omega);
+                        }
+                    }
+                }
+                &>#comments>section{
+                    &>#commentaires>article{
+                        font-size:13px;
+                    }
+                    &>form>section{
+                        &>#submit, textarea{
+                            font-size:14px;
+                        }
+                    }
+                    &>h2{
+                        font-size:15px;
+                    }
+                }
+                &>#bankers{
+                    &>h2{
+                        font-size:14px;
+                    }
+                    &>section>article{
+                        font-size:13px;
+                    }
+                }
+            }
+        }
+    }
+    @include at-breakpoint($break3){
+        @include pre(4, 16);
+        @include span-columns(8, 16);
+        @include post(4, 16);
+        h1{
+            font-size:14px;
+            padding:2% 0;
+        }
+        h3{
+            font-size:13px;
+        }
+        #actions{
+            padding:0.5%;
+            &>ul>li{
+                @include span-columns(2, 12);
+                padding:1%;
+                font-size:13px;
+                &:last-child{
+                    @include span-columns(2, 12);
+                }
+            }
+        }
+        #financescreator{
+            @include span-columns(4 omega, 12);
+            &>#finances{
+                margin-top:0;
+                &>h1{
+                    margin-top:0;
+                }
+                &>#finance{
+                    &>h3{
+                        font-size:13px;
+                    }
+                    &>#progress{
+                        &>strong{
+                            font-size:13px;
+                        }
+                        &>meter{
+                            height:13px;
+                        }
+                    }
+                }
+            }
+
+            &>#infocreator{
+                margin-top:4%;
+                &>h1{
+                    margin-top:0;
+                }
+            }
+        }
+        #infoprojet{
+
+            &>#projet{
+                @include span-columns(8, 12);
+                position: relative;
+                &>#author{
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    position:absolute;
+                    top:2%;
+                    left:2%;
+                    border:4px solid #fff;
+                    box-shadow: 0px 0px 0px 1px #DCDCDC;
+                    display:block;
+                    &>a>img{
+                        width:70px;
+                        height:70px;
+                    }
+                }
+                &>h1{
+                    font-size:20px;
+                }
+                &>h3, #follow{
+                    font-size:13px;
+                }
+            }
+            &>#soutenir{
+                @include span-columns(4 omega, 12);
+
+                &>h1{
+                    @include span-columns($total-columns omega);
+                    padding:4% 0;
+                    font-size:14px;
+                }
+                &>form{
+                    &>#soutien>label{
+                        font-size:13px;
+                    }
+                }
+                &>.fb-like-box{
+                    @include span-columns($total-columns omega);
+                }
+            }
+            &>#rewards{
+                @include span-columns(4 omega, 12);
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                &>#buttonreward{
+                    font-size:14px;
+                    padding:2% 0;
+                }
+                &>section{
+                    display:block;
+                    &>article{
+                        @include span-columns($total-columns omega);
+                        &>h1{
+                            font-size:15px;
+                        }
+                        &>h3{
+                            font-size:13px;
+                        }
+                    }
+                }
+            }
+        }
+        #infoprojet2{
+            @include span-columns(8, 12);
+            &>#infos>#tabs{
+
+                margin-bottom:2%;
+                &>ul>li{
+                    font-size:15px;
+                    padding:1% 0;
+                    &>div{
+                        padding:2%;
+                    }
+                }
+                &>div>p{
+                    padding-top:2%;
+                    font-size:15px;
+                }
+                &>#tab-1{
+                    font-size:14px;
+                    &>p{
+                        @include span-columns($total-columns omega);
+                        &>img{
+                            @include span-columns($total-columns omega);
+                        }
+                    }
+                }
+                &>#comments>section{
+                    &>#commentaires>article{
+                        font-size:13px;
+                    }
+                    &>form>section{
+                        &>#submit, textarea{
+                            font-size:14px;
+                        }
+                    }
+                    &>h2{
+                        font-size:15px;
+                    }
+                }
+                &>#bankers{
+                    &>h2{
+                        font-size:14px;
+                    }
+                    &>section>article{
+                        font-size:13px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "slim/views": "0.1.*",
+        "twig/twig": "1.*",
+        "illuminate/database": "v4.0.10"
+    },
+    "autoload":{
+        "psr-0":{
+            "controller":"",
+            "view":"",
+            "middleware":"",
+            "modele":"",
+            "fb":""
+        }
+    }
+}

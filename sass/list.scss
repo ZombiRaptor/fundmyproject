@@ -1,0 +1,297 @@
+@import "susy";
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists/horizontal-list";
+
+$total-columns: 4;
+$column-width: 5em;
+$gutter-width: 0.5em;
+$grid-padding: 0.2em;
+$container-style: fluid;
+$break1: 1024px 8 1152px;
+$break2:1152px 12 1854px;
+$break3:1855px 16;
+
+body{
+    background-image: url(/www/moine7u/amtj-fmp/img/pattern1.png);
+    font-family:  Arial, sans-serif;
+    font-size:13px;
+}
+
+body>#page{
+    @include box-sizing(border-box);
+    @include container($total-columns,$break1,$break2,$break3);
+    &>#categories{
+        padding-bottom:2%;
+        &>ul{
+
+            &>.selected{
+                background:#e74c3c;
+                &>a{
+                    color:white;
+                }
+            }
+            &>li{
+                @include span-columns(6, 12);
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                font-size:2.5em;
+                padding:0 2%;
+                margin-bottom:1%;
+                &:nth-child(2n){
+                    @include span-columns(6 omega, 12);
+                }
+                &>a{
+                    color:black;
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+    &>section{
+        @include span-columns($total-columns omega);
+        background:white;
+        margin-top:2%;
+        margin-bottom:2%;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        box-shadow: 3px 3px 5px 2px #7f8c8d;
+        padding:1%;
+        &>h2{
+            padding:2%;
+            font-size:2.5em;
+        }
+        &>#null{
+            text-align:center;
+            &>img{
+                vertical-align:middle;
+            }
+        }
+        &>div>ul>li{
+            box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            padding:2%;
+            &>a{
+                text-decoration : none;
+                color:black;
+                &>article{
+                    @include span-columns($total-columns omega);
+                    box-sizing:border-box;
+                    -moz-box-sizing:border-box;
+                    -webkit-box-sizing:border-box;
+                    box-shadow: 0px 0px 0px 1px #DCDCDC;
+                    border:4px solid #fff;
+                    margin-bottom:2%;
+                    background:white;
+                    font-size:2.5em;
+                    &>#photo{
+                        position:relative;
+                        &>span{
+                            position:absolute;
+                            background:black;
+                            opacity:0.7;
+                            top:0;
+                            color:white;
+                            width:100%;
+                            height:100%;
+                        }
+                        &>img{
+                            @include span-columns(1, 4);
+                        }
+                    }
+                    &>div:nth-child(2){
+                        @include span-columns(3 omega); 
+                        &>#titre{
+                            font-weight: bold;
+                            margin-left:5%;
+                            &:first-letter{
+                                text-transform: uppercase;
+                            }
+                        }
+                        &>#but,#recu, #tps{
+                            margin-left:5%;
+                            color:#7f8c8d;
+                        }
+                    }
+                    &>#amount{
+                        @include span-columns(4 omega);
+                        margin-top:3%;
+                        &>strong{
+                            @include span-columns(1, 4);
+                            font-weight:bold;
+                            text-align:center;
+                        }
+                        &>meter{
+                            @include span-columns(3 omega, 4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page_navigation{
+        @include span-columns($total-columns omega);
+        text-align: center;
+        margin-top:3%;
+        margin-bottom:2%;
+        &>a{
+            text-decoration: none;
+            background: #2D2D2D;
+            color:white;
+            margin:1%;
+            padding:0.5% 1%;
+            font-size:2.5em;
+            border-radius: 1px;
+            &:hover{
+                color:#c0392b;
+            }
+        }
+    }
+
+
+
+
+    @include at-breakpoint($break1){
+        &>#categories{
+            &>ul>li{
+                font-size:13px;
+            }
+        }
+        &>section{
+            padding:0;
+            margin-top:2%;
+            &>h2{
+                font-size:14px;
+            }
+            &>div>ul{
+                &>li{
+                    &>a{
+                        @include span-columns(3, 12);
+                        &>article{
+                            font-size:13px;
+                            &>#photo>img{
+                                @include span-columns($total-columns omega);
+                            }
+                            &>div:nth-child(2){
+                                @include span-columns($total-columns omega);
+                            }
+
+                        }
+                        &:nth-child(4n){
+                            @include span-columns(3 omega, 12);
+
+                        }
+                    }
+                }
+            }
+        }
+        .page_navigation>a{
+            font-size:14px;
+        }
+    }
+    @include at-breakpoint($break2){
+        @include pre(1, 12);
+        @include span-columns(10 omega, 12);
+        @include post(1, 12);
+        &>#categories{
+            &>ul>li{
+                font-size:13px;
+            }
+        }
+        &>section{
+            @include span-columns($total-columns omega);
+
+            &>h2{
+                padding:1%;
+                font-size:14px;
+                color:black;
+            }
+            &>div{
+
+                &>ul>li{
+                    &>a{
+                        @include span-columns(3, 12);
+                        &>article{
+                            margin: 0;
+                            margin-top:8px;
+                            background:white;
+                            font-size:13px;
+                            &>#photo>img{
+                                width:100%;
+                            }
+                            &>div:nth-child(2){
+                                @include span-columns($total-columns omega);
+                                &>#titre, #but, #recu, #tps{
+                                    margin-left:0;
+                                    padding-left:5%;
+                                }
+                            }
+
+                        }
+                        &:nth-child(4n){
+                            @include span-columns(3 omega, 12);
+                        }
+                    }
+                }
+            }
+        }
+        .page_navigation>a{
+            font-size:14px;
+        }
+    }
+    @include at-breakpoint($break3){
+
+        @include pre(4, 16);
+        @include span-columns(8 omega, 16);
+        @include post(4, 16);
+        &>#categories{
+            &>ul>li{
+                font-size:13px;
+            }
+        }
+        &>section{
+            @include span-columns($total-columns omega);
+
+            &>h2{
+                padding:1%;
+                font-size:14px;
+                color:black;
+            }
+            &>div{
+
+                &>ul>li{
+                    &>a{
+                        @include span-columns(3, 12);
+                        &>article{
+                            margin: 0;
+                            margin-top:8px;
+                            background:white;
+                            font-size:13px;
+                            &>#photo>img{
+                                width:100%;
+                            }
+                            &>div:nth-child(2){
+                                @include span-columns($total-columns omega);
+                                &>#titre, #but, #recu, #tps{
+                                    margin-left:0;
+                                    padding-left:5%;
+                                }
+                            }
+
+                        }
+                        &:nth-child(4n){
+                            @include span-columns(3 omega, 12);
+                        }
+                    }
+                }
+            }
+        }
+        .page_navigation>a{
+            font-size:14px;
+        }
+    }
+}
